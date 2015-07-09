@@ -19,11 +19,11 @@
 
 namespace pt = boost::property_tree;
 
-Library::Library(Database db) :
-    QWidget(0),
-    db(db),
-    ui(new Ui::Library),
-    runningProcess(new QProcess(this))
+Library::Library(Database db)
+    : QWidget(0),
+      db(db),
+      ui(new Ui::Library),
+      runningProcess(new QProcess(this))
 {
     ui->setupUi(this);
     this->setObjectName("libraryUI");
@@ -53,8 +53,8 @@ void Library::on_testLaunch_clicked()
         auto selection = ui->gameListWidget->currentItem();
         if (selection != nullptr)
         {
-            Game* game = db.getGameByName(selection->text());
-            runProcess(game->executablePath, game->gameDirectory);
+            Game game = db.getGameByName(selection->text());
+            runProcess(game.executablePath, game.gameDirectory);
         }
     }
     else
@@ -180,9 +180,16 @@ bool Library::isProcessRunning() const
 
 void Library::findSteamGames()
 {
+	bool steamFound = true;
     #if defined(_WIN32) || defined(_WIN64)
         QSettings settings("HKEY_CURRENT_USER\\Software\\Valve\\Steam", QSettings::NativeFormat);
-        QDir steamRoot(settings.value("SteamPath").toString());
+        QString steamPath = settings.value("SteamPath").toString();
+        if (steamPath.trimmed() == "")
+        {
+            qDebug("Steam was not found, probably not installed.");
+            steamFound = false;
+        }
+        QDir steamRoot(steamPath);
     #elif defined(__apple__)
         // TODO: however OS X handles steam
     #elif defined(__linux__)
@@ -191,7 +198,7 @@ void Library::findSteamGames()
         QMessageBox(QMessageBox::Critical, "Error", "Platform doesn't support steam.");
     #endif
 
-    if (steamRoot.exists())
+    if (steamRoot.exists() && steamFound)
     {
         pt::ptree libraryFolders;
         pt::read_info(steamRoot.filePath("steamapps/libraryfolders.vdf").toLocal8Bit().constData(), libraryFolders);
@@ -214,8 +221,8 @@ void Library::findSteamGames()
         }
 
         // TODO: Make this prompting better/less obtrusive
-        bool directoryPlural = (steamDirectoryList.size()>1);
-        int ret = QMessageBox(QMessageBox::Question, "Found " + QString::number(steamDirectoryList.size()) + " director" + (directoryPlural? "ies":"y"), QString::number(steamDirectoryList.size()) + " directories have been found.\n\n" + pathString + "Proceed?", QMessageBox::Yes | QMessageBox::No).exec();
+        bool directoryPlural = (steamDirectoryList.size() > 1);
+        int ret = QMessageBox(QMessageBox::Question, "Found " + QString::number(steamDirectoryList.size()) + " director" + (directoryPlural ? "ies" : "y"), QString::number(steamDirectoryList.size()) + " directories have been found.\n\n" + pathString + "Proceed?", QMessageBox::Yes | QMessageBox::No).exec();
         switch(ret)
         {
             case QMessageBox::Yes:
@@ -246,28 +253,20 @@ void Library::parseAcf()
 
             QString name = QString::fromStdString(fileTree.get<std::string>("AppState.name"));
             // TODO: Either add SteamID to db, or add getGameByPath
-            if (db.getGameByName(name) == nullptr)
-            {
-                QString path = steamAppsDir.filePath("common/" + QString::fromStdString(fileTree.get<std::string>("AppState.installdir")));
-                QString exe;
-                QStringList exeList = QDir(path).entryList(QDir::Files | QDir::NoSymLinks | QDir::Executable);
+            QString path = steamAppsDir.filePath("common/" + QString::fromStdString(fileTree.get<std::string>("AppState.installdir")));
+            QString exe;
+            QStringList exeList = QDir(path).entryList(QDir::Files | QDir::NoSymLinks | QDir::Executable);
 
-                QFileDialog exeDialog;
-                exeDialog.setWindowTitle("Select Executable");
-                exeDialog.setFileMode(QFileDialog::ExistingFile);
-                exeDialog.setDirectory(path);
-                if (exeDialog.exec())
-                {
-                    exe = exeDialog.selectedFiles().at(0);
-                }
-                db.addGame(name, path, exe);
-                refreshGames();
-            }
-            else
+            QFileDialog exeDialog;
+            exeDialog.setWindowTitle("Select Executable");
+            exeDialog.setFileMode(QFileDialog::ExistingFile);
+            exeDialog.setDirectory(path);
+            if (exeDialog.exec())
             {
-                QMessageBox(QMessageBox::Critical, name + " exists", name + " already exists in the database.").exec();
-                refreshGames();
+                exe = exeDialog.selectedFiles().at(0);
             }
+            db.addGame(name, path, exe);
+            refreshGames();
         }
     }
 }
