@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7ebrowser',['~Browser',['../db/dc8/class_browser.html#a53b7061ec24c8189cfd72a6bed8ef6b7',1,'Browser']]]
+  ['winpanel',['WinPanel',['../d6/d55/class_win_panel.html',1,'']]],
+  ['winwindow',['WinWindow',['../d8/db8/class_win_window.html',1,'']]]
 ];

@@ -1,8 +1,10 @@
 var dir_d5175ca511ce3ee28071df592a4b17a6 =
 [
+    [ "Libs", "dir_7fd28d84339681d2c1eeb420d2d335f8.html", "dir_7fd28d84339681d2c1eeb420d2d335f8" ],
     [ "BorderlessWindow.h", "d9/d3e/_borderless_window_8h_source.html", null ],
     [ "Browser.h", "d3/d5e/_browser_8h_source.html", null ],
     [ "Database.h", "d1/d94/_database_8h_source.html", null ],
+    [ "Init.h", "d7/d4b/_init_8h_source.html", null ],
     [ "Library.h", "db/dfc/_library_8h_source.html", null ],
     [ "MainPanel.h", "d0/d84/_main_panel_8h_source.html", null ],
     [ "TabLabel.h", "d9/d11/_tab_label_8h_source.html", null ],
