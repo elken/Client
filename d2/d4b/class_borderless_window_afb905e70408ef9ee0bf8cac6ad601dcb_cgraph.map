@@ -1,0 +1,10 @@
+<map id="BorderlessWindow::BorderlessWindow" name="BorderlessWindow::BorderlessWindow">
+<area shape="rect" id="node2" href="$d2/d4b/class_borderless_window.html#a8e85122ab76895d618b6d20cfea4e638" title="BorderlessWindow::WndProc" alt="" coords="276,185,488,211"/>
+<area shape="rect" id="node4" href="$d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508" title="BorderlessWindow::toggle\lBorderless" alt="" coords="558,308,753,349"/>
+<area shape="rect" id="node5" href="$d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301" title="BorderlessWindow::show" alt="" coords="826,345,1014,371"/>
+<area shape="rect" id="node3" href="$d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d" title="BorderlessWindow::toggle\lShadow" alt="" coords="823,119,1017,160"/>
+<area shape="rect" id="node6" href="$d2/d4b/class_borderless_window.html#a312228a6ce5d03bdf92394419c6c5c87" title="BorderlessWindow::getMinimum\lWidth" alt="" coords="539,47,772,88"/>
+<area shape="rect" id="node7" href="$d2/d4b/class_borderless_window.html#a35124db0bd716a0827f559910c4266ac" title="BorderlessWindow::getMinimum\lHeight" alt="" coords="539,112,772,153"/>
+<area shape="rect" id="node8" href="$d2/d4b/class_borderless_window.html#a0eefb93fabc9fb41fbba27f6237823e0" title="BorderlessWindow::getMaximum\lWidth" alt="" coords="536,177,775,219"/>
+<area shape="rect" id="node9" href="$d2/d4b/class_borderless_window.html#afe12799d9dacc061b745c824138ad919" title="BorderlessWindow::getMaximum\lHeight" alt="" coords="536,243,775,284"/>
+</map>

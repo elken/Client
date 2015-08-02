@@ -1,0 +1,10 @@
+<map id="MainPanel::init" name="MainPanel::init">
+<area shape="rect" id="node2" href="$dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a" title="Database::init" alt="" coords="231,5,345,32"/>
+<area shape="rect" id="node3" href="$d4/d1b/_main_panel_8cpp.html#a0ec08917c40e1f62daef1d268c3a34de" title="getStylesheet" alt="" coords="233,56,343,83"/>
+<area shape="rect" id="node4" href="$d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75" title="g_tabFactory" alt="" coords="234,107,342,133"/>
+<area shape="rect" id="node5" href="$d1/d88/class_main_panel.html#a5a9a0b381327e480b90ac01ce95f8006" title="MainPanel::pushButtonMinimize" alt="" coords="173,157,403,184"/>
+<area shape="rect" id="node6" href="$d1/d88/class_main_panel.html#aba28a15015874114feea84cfb7094c3e" title="MainPanel::pushButtonMaximize" alt="" coords="171,208,405,235"/>
+<area shape="rect" id="node7" href="$d1/d88/class_main_panel.html#af0614a8cb6723ecdc1ec34353e1876f5" title="MainPanel::pushButtonClose" alt="" coords="183,259,393,285"/>
+<area shape="rect" id="node8" href="$d1/d88/class_main_panel.html#a2b12008f0243fffd32485617ab6dabba" title="MainPanel::setTabLibrary" alt="" coords="195,309,381,336"/>
+<area shape="rect" id="node9" href="$d1/d88/class_main_panel.html#a93c764eb598996ffbbe651a880edda76" title="MainPanel::setTabBrowser" alt="" coords="190,360,386,387"/>
+</map>
