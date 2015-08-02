@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,9 +107,9 @@ $(document).ready(function(){initNavTree('d3/ddb/_tab_label_8cpp_source.html','.
 <div class="title">TabLabel.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d3/ddb/_tab_label_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d11/_tab_label_8h.html">TabLabel.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;TabLabel.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="../../d2/dda/class_tab_label.html#ab17d9835cd74bf9cfa224e7c3c5a2497">    3</a></span>&#160;<a class="code" href="../../d2/dda/class_tab_label.html#ab17d9835cd74bf9cfa224e7c3c5a2497">TabLabel::TabLabel</a>(QWidget* parent) : QLabel(parent)</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;TabLabel::TabLabel(QWidget* parent) : QLabel(parent)</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment">// Set up drop shadow effect for hover event.</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    dse = <span class="keyword">new</span> QGraphicsDropShadowEffect();</div>
@@ -128,25 +126,25 @@ $(document).ready(function(){initNavTree('d3/ddb/_tab_label_8cpp_source.html','.
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    dse-&gt;setEnabled(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Connect shadowing signals</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="../../d2/dda/class_tab_label.html#ad6e0c990795bced33a7c482c8ccb1436">hovered</a>()), <span class="keyword">this</span>, SLOT(enableShadow()));</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(<a class="code" href="../../d2/dda/class_tab_label.html#a74f4f8a336382fa3d383e826772ca1cb">unhovered</a>()), <span class="keyword">this</span>, SLOT(disableShadow()));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(hovered()), <span class="keyword">this</span>, SLOT(enableShadow()));</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    connect(<span class="keyword">this</span>, SIGNAL(unhovered()), <span class="keyword">this</span>, SLOT(disableShadow()));</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d2/dda/class_tab_label.html#afee256ed5f6ab84448ffb6ffe834cfa0">   24</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/dda/class_tab_label.html#afee256ed5f6ab84448ffb6ffe834cfa0">TabLabel::enterEvent</a>(QEvent* event)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> TabLabel::enterEvent(QEvent* event)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_EMIT <a class="code" href="../../d2/dda/class_tab_label.html#ad6e0c990795bced33a7c482c8ccb1436">hovered</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_EMIT hovered();</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    QWidget::enterEvent(event);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d2/dda/class_tab_label.html#aa77c0acc57f632efb18feeb4dafb937b">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/dda/class_tab_label.html#aa77c0acc57f632efb18feeb4dafb937b">TabLabel::leaveEvent</a>(QEvent* event)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> TabLabel::leaveEvent(QEvent* event)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Q_EMIT <a class="code" href="../../d2/dda/class_tab_label.html#a74f4f8a336382fa3d383e826772ca1cb">unhovered</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Q_EMIT unhovered();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    QWidget::leaveEvent(event);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d2/dda/class_tab_label.html#aa8b4839066329686c51434f720ecf2f6">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/dda/class_tab_label.html#aa8b4839066329686c51434f720ecf2f6">TabLabel::mousePressEvent</a>(QMouseEvent* event)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> TabLabel::mousePressEvent(QMouseEvent* event)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Q_EMIT <a class="code" href="../../d2/dda/class_tab_label.html#a8c889ccc4e202a95af52c8d7af48b236">clicked</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    Q_EMIT clicked();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    dse-&gt;setEnabled(<span class="keyword">false</span>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    QWidget::mousePressEvent(event);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
@@ -168,21 +166,13 @@ $(document).ready(function(){initNavTree('d3/ddb/_tab_label_8cpp_source.html','.
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        this-&gt;setStyleSheet(<span class="stringliteral">&quot;color: #FFF; font-weight: regular;&quot;</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="ttc" id="_tab_label_8h_html"><div class="ttname"><a href="../../d9/d11/_tab_label_8h.html">TabLabel.h</a></div></div>
-<div class="ttc" id="class_tab_label_html_aa8b4839066329686c51434f720ecf2f6"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#aa8b4839066329686c51434f720ecf2f6">TabLabel::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddb/_tab_label_8cpp_source.html#l00036">TabLabel.cpp:36</a></div></div>
-<div class="ttc" id="class_tab_label_html_ad6e0c990795bced33a7c482c8ccb1436"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#ad6e0c990795bced33a7c482c8ccb1436">TabLabel::hovered</a></div><div class="ttdeci">void hovered()</div></div>
-<div class="ttc" id="class_tab_label_html_aa77c0acc57f632efb18feeb4dafb937b"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#aa77c0acc57f632efb18feeb4dafb937b">TabLabel::leaveEvent</a></div><div class="ttdeci">void leaveEvent(QEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddb/_tab_label_8cpp_source.html#l00030">TabLabel.cpp:30</a></div></div>
-<div class="ttc" id="class_tab_label_html_afee256ed5f6ab84448ffb6ffe834cfa0"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#afee256ed5f6ab84448ffb6ffe834cfa0">TabLabel::enterEvent</a></div><div class="ttdeci">void enterEvent(QEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddb/_tab_label_8cpp_source.html#l00024">TabLabel.cpp:24</a></div></div>
-<div class="ttc" id="class_tab_label_html_a74f4f8a336382fa3d383e826772ca1cb"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#a74f4f8a336382fa3d383e826772ca1cb">TabLabel::unhovered</a></div><div class="ttdeci">void unhovered()</div></div>
-<div class="ttc" id="class_tab_label_html_ab17d9835cd74bf9cfa224e7c3c5a2497"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#ab17d9835cd74bf9cfa224e7c3c5a2497">TabLabel::TabLabel</a></div><div class="ttdeci">TabLabel(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/ddb/_tab_label_8cpp_source.html#l00003">TabLabel.cpp:3</a></div></div>
-<div class="ttc" id="class_tab_label_html_a8c889ccc4e202a95af52c8d7af48b236"><div class="ttname"><a href="../../d2/dda/class_tab_label.html#a8c889ccc4e202a95af52c8d7af48b236">TabLabel::clicked</a></div><div class="ttdeci">void clicked()</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d3/ddb/_tab_label_8cpp.html">TabLabel.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>TabLabel.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

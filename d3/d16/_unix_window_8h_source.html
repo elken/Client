@@ -72,7 +72,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,20 +108,20 @@ $(document).ready(function(){initNavTree('d3/d16/_unix_window_8h_source.html','.
 <div class="title">UnixWindow.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d3/d16/_unix_window_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../de/d68/_unix_panel_8h.html">UnixPanel.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;UnixPanel.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d2/d2b/class_unix_window.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/d2b/class_unix_window.html">UnixWindow</a> : <span class="keyword">public</span> QWidget</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="../../d2/d2b/class_unix_window.html#a0b760060752bfa118c5d86b86bfab6d2">UnixWindow</a>();</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="../../d2/d2b/class_unix_window.html">UnixWindow</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a3650eb61cf59c7f01778da4b5057a078">minimize</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a5d4036ac48b03904ae728d43e3b9eb50">maximize</a>();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a385d71b20907ee4b9c8177628db09764">closeWindow</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> minimize();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> maximize();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> closeWindow();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="../../de/d68/class_unix_panel.html">UnixPanel</a>* mainPanel;</div>
@@ -133,20 +132,15 @@ $(document).ready(function(){initNavTree('d3/d16/_unix_window_8h_source.html','.
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent* evt);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent* evt);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="ttc" id="class_unix_window_html_a0b760060752bfa118c5d86b86bfab6d2"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a0b760060752bfa118c5d86b86bfab6d2">UnixWindow::UnixWindow</a></div><div class="ttdeci">UnixWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00008">UnixWindow.cpp:8</a></div></div>
-<div class="ttc" id="_unix_panel_8h_html"><div class="ttname"><a href="../../de/d68/_unix_panel_8h.html">UnixPanel.h</a></div></div>
-<div class="ttc" id="class_unix_panel_html"><div class="ttname"><a href="../../de/d68/class_unix_panel.html">UnixPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_unix_panel_8h_source.html#l00007">UnixPanel.h:7</a></div></div>
-<div class="ttc" id="class_unix_window_html_a3650eb61cf59c7f01778da4b5057a078"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a3650eb61cf59c7f01778da4b5057a078">UnixWindow::minimize</a></div><div class="ttdeci">void minimize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00026">UnixWindow.cpp:26</a></div></div>
-<div class="ttc" id="class_unix_window_html"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html">UnixWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d16/_unix_window_8h_source.html#l00005">UnixWindow.h:5</a></div></div>
-<div class="ttc" id="class_unix_window_html_a385d71b20907ee4b9c8177628db09764"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a385d71b20907ee4b9c8177628db09764">UnixWindow::closeWindow</a></div><div class="ttdeci">void closeWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00043">UnixWindow.cpp:43</a></div></div>
-<div class="ttc" id="class_unix_window_html_a5d4036ac48b03904ae728d43e3b9eb50"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a5d4036ac48b03904ae728d43e3b9eb50">UnixWindow::maximize</a></div><div class="ttdeci">void maximize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00031">UnixWindow.cpp:31</a></div></div>
+<div class="ttc" id="class_unix_panel_html"><div class="ttname"><a href="../../de/d68/class_unix_panel.html">UnixPanel</a></div><div class="ttdef"><b>Definition:</b> UnixPanel.h:7</div></div>
+<div class="ttc" id="class_unix_window_html"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html">UnixWindow</a></div><div class="ttdef"><b>Definition:</b> UnixWindow.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d3/d16/_unix_window_8h.html">UnixWindow.h</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>UnixWindow.h</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 18:10:04 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

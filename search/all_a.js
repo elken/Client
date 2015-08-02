@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['newstab',['newsTab',['../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb',1,'MainPanel']]]
+  ['ui',['Ui',['../dc/df0/namespace_ui.html',1,'']]],
+  ['unixpanel',['UnixPanel',['../de/d68/class_unix_panel.html',1,'']]],
+  ['unixwindow',['UnixWindow',['../d2/d2b/class_unix_window.html',1,'']]]
 ];

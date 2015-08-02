@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,14 +107,14 @@ $(document).ready(function(){initNavTree('d6/d2b/_unix_window_8cpp_source.html',
 <div class="title">UnixWindow.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/d2b/_unix_window_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d16/_unix_window_8h.html">UnixWindow.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;UnixWindow.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QDesktopWidget&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QVBoxLayout&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="../../d2/d2b/class_unix_window.html#a0b760060752bfa118c5d86b86bfab6d2">    8</a></span>&#160;<a class="code" href="../../d2/d2b/class_unix_window.html#a0b760060752bfa118c5d86b86bfab6d2">UnixWindow::UnixWindow</a>()</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;UnixWindow::UnixWindow()</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    setObjectName(<span class="stringliteral">&quot;unixWindow&quot;</span>);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
@@ -134,12 +132,12 @@ $(document).ready(function(){initNavTree('d6/d2b/_unix_window_8cpp_source.html',
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    this-&gt;show();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d2/d2b/class_unix_window.html#a3650eb61cf59c7f01778da4b5057a078">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a3650eb61cf59c7f01778da4b5057a078">UnixWindow::minimize</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> UnixWindow::minimize()</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    showMinimized();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d2/d2b/class_unix_window.html#a5d4036ac48b03904ae728d43e3b9eb50">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a5d4036ac48b03904ae728d43e3b9eb50">UnixWindow::maximize</a>()</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> UnixWindow::maximize()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (isMaximized())</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
@@ -151,7 +149,7 @@ $(document).ready(function(){initNavTree('d6/d2b/_unix_window_8cpp_source.html',
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d2/d2b/class_unix_window.html#a385d71b20907ee4b9c8177628db09764">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d2b/class_unix_window.html#a385d71b20907ee4b9c8177628db09764">UnixWindow::closeWindow</a>()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> UnixWindow::closeWindow()</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    this-&gt;close();</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
@@ -176,19 +174,14 @@ $(document).ready(function(){initNavTree('d6/d2b/_unix_window_8cpp_source.html',
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        oldWindowPos = evt-&gt;globalPos();</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
-<div class="ttc" id="class_unix_window_html_a0b760060752bfa118c5d86b86bfab6d2"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a0b760060752bfa118c5d86b86bfab6d2">UnixWindow::UnixWindow</a></div><div class="ttdeci">UnixWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00008">UnixWindow.cpp:8</a></div></div>
-<div class="ttc" id="_unix_window_8h_html"><div class="ttname"><a href="../../d3/d16/_unix_window_8h.html">UnixWindow.h</a></div></div>
 <div class="ttc" id="class_unix_panel_html"><div class="ttname"><a href="../../de/d68/class_unix_panel.html">UnixPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../de/d68/_unix_panel_8h_source.html#l00007">UnixPanel.h:7</a></div></div>
-<div class="ttc" id="class_unix_window_html_a3650eb61cf59c7f01778da4b5057a078"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a3650eb61cf59c7f01778da4b5057a078">UnixWindow::minimize</a></div><div class="ttdeci">void minimize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00026">UnixWindow.cpp:26</a></div></div>
-<div class="ttc" id="class_unix_window_html_a385d71b20907ee4b9c8177628db09764"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a385d71b20907ee4b9c8177628db09764">UnixWindow::closeWindow</a></div><div class="ttdeci">void closeWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00043">UnixWindow.cpp:43</a></div></div>
-<div class="ttc" id="class_unix_window_html_a5d4036ac48b03904ae728d43e3b9eb50"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html#a5d4036ac48b03904ae728d43e3b9eb50">UnixWindow::maximize</a></div><div class="ttdeci">void maximize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d2b/_unix_window_8cpp_source.html#l00031">UnixWindow.cpp:31</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d6/d2b/_unix_window_8cpp.html">UnixWindow.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>UnixWindow.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

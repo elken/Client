@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['enterevent',['enterEvent',['../d2/dda/class_tab_label.html#afee256ed5f6ab84448ffb6ffe834cfa0',1,'TabLabel']]],
-  ['executablepath',['executablePath',['../dd/db8/struct_game.html#ad870943c9fa3d53f175fdf92f5a9881b',1,'Game']]]
+  ['game',['Game',['../dd/db8/struct_game.html',1,'']]],
+  ['gamename',['gameName',['../dd/db8/struct_game.html#a2dc75f118e0b9b79715efb8fa7881dc2',1,'Game']]],
+  ['getgamebyid',['getGameById',['../dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099',1,'Database']]],
+  ['getgamebyname',['getGameByName',['../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f',1,'Database']]],
+  ['getgamecount',['getGameCount',['../dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db',1,'Database']]],
+  ['getgames',['getGames',['../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f',1,'Database']]]
 ];

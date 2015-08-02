@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,11 +107,11 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="title">MainPanel.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d1b/_main_panel_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d84/_main_panel_8h.html">MainPanel.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;MainPanel.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">    5</a></span>&#160;<a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>* <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>* label, QString name, QString text)</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>* g_tabFactory(<a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>* label, QString name, QString text)</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    label-&gt;setObjectName(name);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    label-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);</div>
@@ -127,7 +125,7 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> label;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d4/d1b/_main_panel_8cpp.html#a0ec08917c40e1f62daef1d268c3a34de">   19</a></span>&#160;QString <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a0ec08917c40e1f62daef1d268c3a34de">getStylesheet</a>(QString location)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;QString getStylesheet(QString location)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QFile stylesheet(location);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (stylesheet.open(QFile::ReadOnly))</div>
@@ -138,19 +136,19 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/d88/class_main_panel.html#a1f02146ae9ae2c7555ff6c1b89e1b954">   30</a></span>&#160;<a class="code" href="../../d1/d88/class_main_panel.html#a1f02146ae9ae2c7555ff6c1b89e1b954">MainPanel::MainPanel</a>(QWidget* parent) :</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;MainPanel::MainPanel(QWidget* parent) :</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    QWidget(parent)</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    setObjectName(<span class="stringliteral">&quot;mainPanel&quot;</span>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#afdae445397b557a1b938c5d6fcc79e01">init</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    init();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    show();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d88/class_main_panel.html#afdae445397b557a1b938c5d6fcc79e01">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/d88/class_main_panel.html#afdae445397b557a1b938c5d6fcc79e01">MainPanel::init</a>()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> MainPanel::init()</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d1/d88/class_main_panel.html#ae2d3b677c857f7322dbad143f4d25515">db</a>.<a class="code" href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">init</a>())</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">if</span> (!db.init())</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        QMessageBox error;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        error.critical(0, <span class="stringliteral">&quot;Error!&quot;</span>, <span class="stringliteral">&quot;An error occured while trying to load the database.&quot;</span>);</div>
@@ -158,17 +156,17 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a> = <span class="keyword">new</span> QStackedWidget(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    stack = <span class="keyword">new</span> QStackedWidget(<span class="keyword">this</span>);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QString style = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a0ec08917c40e1f62daef1d268c3a34de">getStylesheet</a>(<span class="stringliteral">&quot;:/Styles/Content.css&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QString style = getStylesheet(<span class="stringliteral">&quot;:/Styles/Content.css&quot;</span>);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// Prepare UI objects for each tab</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">libraryPtr</a> = <span class="keyword">new</span> <a class="code" href="../../d7/d55/class_library.html">Library</a>(<a class="code" href="../../d1/d88/class_main_panel.html#ae2d3b677c857f7322dbad143f4d25515">db</a>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">libraryPtr</a>-&gt;setStyleSheet(style);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a8ac5ecf5aa2bdd7fc13d88354a9a441f">browserPtr</a> = <span class="keyword">new</span> <a class="code" href="../../db/dc8/class_browser.html">Browser</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a8ac5ecf5aa2bdd7fc13d88354a9a441f">browserPtr</a>-&gt;setStyleSheet(style);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">libraryPtr</a>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a8ac5ecf5aa2bdd7fc13d88354a9a441f">browserPtr</a>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;setCurrentWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">libraryPtr</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    libraryPtr = <span class="keyword">new</span> <a class="code" href="../../d7/d55/class_library.html">Library</a>(db);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    libraryPtr-&gt;setStyleSheet(style);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    browserPtr = <span class="keyword">new</span> <a class="code" href="../../db/dc8/class_browser.html">Browser</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    browserPtr-&gt;setStyleSheet(style);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    stack-&gt;addWidget(libraryPtr);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    stack-&gt;addWidget(browserPtr);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    stack-&gt;setCurrentWidget(libraryPtr);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// System layout</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    QHBoxLayout* systemLayout = <span class="keyword">new</span> QHBoxLayout;</div>
@@ -206,33 +204,33 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    headerLayout-&gt;addSpacing(40);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// Header tabs</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a> = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a> = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>, <span class="stringliteral">&quot;libraryTab&quot;</span>, <span class="stringliteral">&quot;LIBRARY&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    libraryTab = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    libraryTab = g_tabFactory(libraryTab, <span class="stringliteral">&quot;libraryTab&quot;</span>, <span class="stringliteral">&quot;LIBRARY&quot;</span>);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    headerLayout-&gt;addSpacing(8);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    headerLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    headerLayout-&gt;addWidget(libraryTab);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    libraryTab-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a9eac1099b5893f13868f6fd4c8f6d5ef">storeTab</a> = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a9eac1099b5893f13868f6fd4c8f6d5ef">storeTab</a> = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d1/d88/class_main_panel.html#a9eac1099b5893f13868f6fd4c8f6d5ef">storeTab</a>, <span class="stringliteral">&quot;storeTab&quot;</span>, <span class="stringliteral">&quot;  STORE&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    storeTab = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    storeTab = g_tabFactory(storeTab, <span class="stringliteral">&quot;storeTab&quot;</span>, <span class="stringliteral">&quot;  STORE&quot;</span>);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    headerLayout-&gt;addSpacing(8);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    headerLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a9eac1099b5893f13868f6fd4c8f6d5ef">storeTab</a>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    headerLayout-&gt;addWidget(storeTab);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a07536dd99408efc4e6b789486ec35a98">modsTab</a> = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a07536dd99408efc4e6b789486ec35a98">modsTab</a> = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d1/d88/class_main_panel.html#a07536dd99408efc4e6b789486ec35a98">modsTab</a>, <span class="stringliteral">&quot;modsTab&quot;</span>, <span class="stringliteral">&quot; MODS&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    modsTab = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    modsTab = g_tabFactory(modsTab, <span class="stringliteral">&quot;modsTab&quot;</span>, <span class="stringliteral">&quot; MODS&quot;</span>);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    headerLayout-&gt;addSpacing(8);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    headerLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a07536dd99408efc4e6b789486ec35a98">modsTab</a>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    headerLayout-&gt;addWidget(modsTab);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb">newsTab</a> = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb">newsTab</a> = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb">newsTab</a>, <span class="stringliteral">&quot;newsTab&quot;</span>, <span class="stringliteral">&quot;NEWS&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    newsTab = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    newsTab = g_tabFactory(newsTab, <span class="stringliteral">&quot;newsTab&quot;</span>, <span class="stringliteral">&quot;NEWS&quot;</span>);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    headerLayout-&gt;addSpacing(8);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    headerLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb">newsTab</a>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    headerLayout-&gt;addWidget(newsTab);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a> = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a> = <a class="code" href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a>(<a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a>, <span class="stringliteral">&quot;browserTab&quot;</span>, <span class="stringliteral">&quot;BROWSER&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    browserTab = <span class="keyword">new</span> <a class="code" href="../../d2/dda/class_tab_label.html">TabLabel</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    browserTab = g_tabFactory(browserTab, <span class="stringliteral">&quot;browserTab&quot;</span>, <span class="stringliteral">&quot;BROWSER&quot;</span>);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    headerLayout-&gt;addSpacing(8);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    headerLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    headerLayout-&gt;addWidget(browserTab);</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a> = <a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    activeTab = libraryTab;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    headerLayout-&gt;addStretch();</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
@@ -240,22 +238,22 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    systemLayout-&gt;addStretch();</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">// Minimize</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    QPushButton* <a class="code" href="../../d1/d88/class_main_panel.html#a5a9a0b381327e480b90ac01ce95f8006">pushButtonMinimize</a> = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    QPushButton* pushButtonMinimize = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    pushButtonMinimize-&gt;setObjectName(<span class="stringliteral">&quot;pushButtonMinimize&quot;</span>);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    systemLayout-&gt;addWidget(pushButtonMinimize);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    QObject::connect(pushButtonMinimize, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="../../d1/d88/class_main_panel.html#a5a9a0b381327e480b90ac01ce95f8006">pushButtonMinimize</a>()));</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    QObject::connect(pushButtonMinimize, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(pushButtonMinimize()));</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">// Maximize</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    QPushButton* <a class="code" href="../../d1/d88/class_main_panel.html#aba28a15015874114feea84cfb7094c3e">pushButtonMaximize</a> = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    QPushButton* pushButtonMaximize = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    pushButtonMaximize-&gt;setObjectName(<span class="stringliteral">&quot;pushButtonMaximize&quot;</span>);</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    systemLayout-&gt;addWidget(pushButtonMaximize);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    QObject::connect(pushButtonMaximize, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="../../d1/d88/class_main_panel.html#aba28a15015874114feea84cfb7094c3e">pushButtonMaximize</a>()));</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    QObject::connect(pushButtonMaximize, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(pushButtonMaximize()));</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">// Close</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    QPushButton* <a class="code" href="../../d1/d88/class_main_panel.html#af0614a8cb6723ecdc1ec34353e1876f5">pushButtonClose</a> = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    QPushButton* pushButtonClose = <span class="keyword">new</span> QPushButton(<span class="stringliteral">&quot;&quot;</span>, <span class="keyword">this</span>);</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    pushButtonClose-&gt;setObjectName(<span class="stringliteral">&quot;pushButtonClose&quot;</span>);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    systemLayout-&gt;addWidget(pushButtonClose);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    QObject::connect(pushButtonClose, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="../../d1/d88/class_main_panel.html#af0614a8cb6723ecdc1ec34353e1876f5">pushButtonClose</a>()));</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    QObject::connect(pushButtonClose, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(pushButtonClose()));</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">// Main panel layout</span></div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    QGridLayout* mainGridLayout = <span class="keyword">new</span> QGridLayout();</div>
@@ -283,11 +281,11 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    verticalLayout-&gt;setAlignment(Qt::AlignHCenter);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    verticalLayout-&gt;addLayout(topLayout, 1);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    verticalLayout-&gt;addWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>, 4);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    verticalLayout-&gt;addWidget(stack, 4);</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="comment">// Connect signals</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    connect(<a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="../../d1/d88/class_main_panel.html#a2b12008f0243fffd32485617ab6dabba">setTabLibrary</a>()));</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    connect(<a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a>, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(<a class="code" href="../../d1/d88/class_main_panel.html#a93c764eb598996ffbbe651a880edda76">setTabBrowser</a>()));</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    connect(libraryTab, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(setTabLibrary()));</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    connect(browserTab, SIGNAL(clicked()), <span class="keyword">this</span>, SLOT(setTabBrowser()));</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="comment">// Show</span></div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    centralWidget-&gt;setLayout(verticalLayout);</div>
@@ -296,58 +294,37 @@ $(document).ready(function(){initNavTree('d4/d1b/_main_panel_8cpp_source.html','
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="comment">// Tab swap slots</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="../../d1/d88/class_main_panel.html#a2b12008f0243fffd32485617ab6dabba">  188</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/d88/class_main_panel.html#a2b12008f0243fffd32485617ab6dabba">MainPanel::setTabLibrary</a>()</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keywordtype">void</span> MainPanel::setTabLibrary()</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;{</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;currentWidget()-&gt;objectName() != <span class="stringliteral">&quot;libraryUI&quot;</span>)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (stack-&gt;currentWidget()-&gt;objectName() != <span class="stringliteral">&quot;libraryUI&quot;</span>)</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: regular; color: #FFF;&quot;</span>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;setCurrentWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">libraryPtr</a>);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a> = <a class="code" href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">libraryTab</a>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        activeTab-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: regular; color: #FFF;&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        stack-&gt;setCurrentWidget(libraryPtr);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        activeTab = libraryTab;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        activeTab-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="../../d1/d88/class_main_panel.html#a93c764eb598996ffbbe651a880edda76">  199</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/d88/class_main_panel.html#a93c764eb598996ffbbe651a880edda76">MainPanel::setTabBrowser</a>()</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> MainPanel::setTabBrowser()</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;currentWidget()-&gt;objectName() != <span class="stringliteral">&quot;browserUI&quot;</span>)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span>(stack-&gt;currentWidget()-&gt;objectName() != <span class="stringliteral">&quot;browserUI&quot;</span>)</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: regular; color: #FFF;&quot;</span>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">stack</a>-&gt;setCurrentWidget(<a class="code" href="../../d1/d88/class_main_panel.html#a8ac5ecf5aa2bdd7fc13d88354a9a441f">browserPtr</a>);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a> = <a class="code" href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">browserTab</a>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">activeTab</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        activeTab-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: regular; color: #FFF;&quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        stack-&gt;setCurrentWidget(browserPtr);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        activeTab = browserTab;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        activeTab-&gt;setStyleSheet(<span class="stringliteral">&quot;font-weight: bold; color: lightgreen;&quot;</span>);</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
-<div class="ttc" id="class_main_panel_html_a6723f99b3b34b9d8accbf41fa820caa9"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a6723f99b3b34b9d8accbf41fa820caa9">MainPanel::browserTab</a></div><div class="ttdeci">TabLabel * browserTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00041">MainPanel.h:41</a></div></div>
-<div class="ttc" id="class_main_panel_html_affdd0aaef1de13270a6693edc1f6d3c9"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#affdd0aaef1de13270a6693edc1f6d3c9">MainPanel::activeTab</a></div><div class="ttdeci">TabLabel * activeTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00036">MainPanel.h:36</a></div></div>
 <div class="ttc" id="class_tab_label_html"><div class="ttname"><a href="../../d2/dda/class_tab_label.html">TabLabel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d11/_tab_label_8h_source.html#l00008">TabLabel.h:8</a></div></div>
-<div class="ttc" id="class_main_panel_html_a8ac5ecf5aa2bdd7fc13d88354a9a441f"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a8ac5ecf5aa2bdd7fc13d88354a9a441f">MainPanel::browserPtr</a></div><div class="ttdeci">QWidget * browserPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00034">MainPanel.h:34</a></div></div>
-<div class="ttc" id="_main_panel_8h_html"><div class="ttname"><a href="../../d0/d84/_main_panel_8h.html">MainPanel.h</a></div></div>
-<div class="ttc" id="class_main_panel_html_a2b12008f0243fffd32485617ab6dabba"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a2b12008f0243fffd32485617ab6dabba">MainPanel::setTabLibrary</a></div><div class="ttdeci">void setTabLibrary()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00188">MainPanel.cpp:188</a></div></div>
-<div class="ttc" id="class_main_panel_html_a5a9a0b381327e480b90ac01ce95f8006"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a5a9a0b381327e480b90ac01ce95f8006">MainPanel::pushButtonMinimize</a></div><div class="ttdeci">virtual void pushButtonMinimize()=0</div></div>
-<div class="ttc" id="class_main_panel_html_aba28a15015874114feea84cfb7094c3e"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#aba28a15015874114feea84cfb7094c3e">MainPanel::pushButtonMaximize</a></div><div class="ttdeci">virtual void pushButtonMaximize()=0</div></div>
-<div class="ttc" id="class_main_panel_html_a948608bd25ee6faf0cc4a8a90c9a26ec"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a948608bd25ee6faf0cc4a8a90c9a26ec">MainPanel::stack</a></div><div class="ttdeci">QStackedWidget * stack</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00032">MainPanel.h:32</a></div></div>
-<div class="ttc" id="class_main_panel_html_a07536dd99408efc4e6b789486ec35a98"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a07536dd99408efc4e6b789486ec35a98">MainPanel::modsTab</a></div><div class="ttdeci">TabLabel * modsTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00039">MainPanel.h:39</a></div></div>
-<div class="ttc" id="class_main_panel_html_adbad769e354f684da54563b9b92fe6ba"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba">MainPanel::libraryTab</a></div><div class="ttdeci">TabLabel * libraryTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00037">MainPanel.h:37</a></div></div>
-<div class="ttc" id="_main_panel_8cpp_html_a0ec08917c40e1f62daef1d268c3a34de"><div class="ttname"><a href="../../d4/d1b/_main_panel_8cpp.html#a0ec08917c40e1f62daef1d268c3a34de">getStylesheet</a></div><div class="ttdeci">QString getStylesheet(QString location)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00019">MainPanel.cpp:19</a></div></div>
-<div class="ttc" id="class_main_panel_html_ae2d3b677c857f7322dbad143f4d25515"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#ae2d3b677c857f7322dbad143f4d25515">MainPanel::db</a></div><div class="ttdeci">Database db</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00030">MainPanel.h:30</a></div></div>
-<div class="ttc" id="class_main_panel_html_a8a2de08e17615f182aa434abde08cf88"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88">MainPanel::libraryPtr</a></div><div class="ttdeci">QWidget * libraryPtr</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00033">MainPanel.h:33</a></div></div>
-<div class="ttc" id="class_browser_html"><div class="ttname"><a href="../../db/dc8/class_browser.html">Browser</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5e/_browser_8h_source.html#l00010">Browser.h:10</a></div></div>
-<div class="ttc" id="class_database_html_a7c8d83dd74fe50ae3c261479235c702a"><div class="ttname"><a href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">Database::init</a></div><div class="ttdeci">bool init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00011">Database.cpp:11</a></div></div>
-<div class="ttc" id="class_main_panel_html_a93c764eb598996ffbbe651a880edda76"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a93c764eb598996ffbbe651a880edda76">MainPanel::setTabBrowser</a></div><div class="ttdeci">void setTabBrowser()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00199">MainPanel.cpp:199</a></div></div>
-<div class="ttc" id="class_main_panel_html_a9eac1099b5893f13868f6fd4c8f6d5ef"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a9eac1099b5893f13868f6fd4c8f6d5ef">MainPanel::storeTab</a></div><div class="ttdeci">TabLabel * storeTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00038">MainPanel.h:38</a></div></div>
-<div class="ttc" id="class_main_panel_html_af0614a8cb6723ecdc1ec34353e1876f5"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#af0614a8cb6723ecdc1ec34353e1876f5">MainPanel::pushButtonClose</a></div><div class="ttdeci">virtual void pushButtonClose()=0</div></div>
-<div class="ttc" id="class_main_panel_html_afdae445397b557a1b938c5d6fcc79e01"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#afdae445397b557a1b938c5d6fcc79e01">MainPanel::init</a></div><div class="ttdeci">void init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00040">MainPanel.cpp:40</a></div></div>
-<div class="ttc" id="_main_panel_8cpp_html_a91d9fea3df42e12f7dcc47eb7fcf7d75"><div class="ttname"><a href="../../d4/d1b/_main_panel_8cpp.html#a91d9fea3df42e12f7dcc47eb7fcf7d75">g_tabFactory</a></div><div class="ttdeci">TabLabel * g_tabFactory(TabLabel *label, QString name, QString text)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00005">MainPanel.cpp:5</a></div></div>
-<div class="ttc" id="class_main_panel_html_a1f02146ae9ae2c7555ff6c1b89e1b954"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#a1f02146ae9ae2c7555ff6c1b89e1b954">MainPanel::MainPanel</a></div><div class="ttdeci">MainPanel(QWidget *parent=0)</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d1b/_main_panel_8cpp_source.html#l00030">MainPanel.cpp:30</a></div></div>
+<div class="ttc" id="class_browser_html"><div class="ttname"><a href="../../db/dc8/class_browser.html">Browser</a></div><div class="ttdoc">WebKit Browser class. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5e/_browser_8h_source.html#l00016">Browser.h:16</a></div></div>
 <div class="ttc" id="class_library_html"><div class="ttname"><a href="../../d7/d55/class_library.html">Library</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/_library_8h_source.html#l00013">Library.h:13</a></div></div>
-<div class="ttc" id="class_main_panel_html_aaf979735120c58bbda89dde0cc11a0fb"><div class="ttname"><a href="../../d1/d88/class_main_panel.html#aaf979735120c58bbda89dde0cc11a0fb">MainPanel::newsTab</a></div><div class="ttdeci">TabLabel * newsTab</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00040">MainPanel.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d4/d1b/_main_panel_8cpp.html">MainPanel.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>MainPanel.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

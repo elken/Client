@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,7 +107,7 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="title">BorderlessWindow.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../df/dd3/_borderless_window_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d3e/_borderless_window_8h.html">BorderlessWindow.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;BorderlessWindow.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QDesktopWidget&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
@@ -120,12 +118,12 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;windowsx.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">   12</a></span>&#160;HWND <a class="code" href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">g_winId</a> = 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;HWND g_winId = 0;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>* BorderlessWindow::mainPanel;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;QApplication* BorderlessWindow::a;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#afb905e70408ef9ee0bf8cac6ad601dcb">   17</a></span>&#160;<a class="code" href="../../d2/d4b/class_borderless_window.html#afb905e70408ef9ee0bf8cac6ad601dcb">BorderlessWindow::BorderlessWindow</a>(QApplication* app, HBRUSH windowBackground, <span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height) : hWnd(0),</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;BorderlessWindow::BorderlessWindow(QApplication* app, HBRUSH windowBackground, <span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height) : hWnd(0),</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    hInstance(GetModuleHandle(NULL)),</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    closed(false),</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    visible(false),</div>
@@ -136,13 +134,13 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    WNDCLASSEX wcx = {0};</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    wcx.cbSize = <span class="keyword">sizeof</span>(WNDCLASSEX);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    wcx.style = CS_HREDRAW | CS_VREDRAW;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    wcx.hInstance = <a class="code" href="../../d2/d4b/class_borderless_window.html#aac4d2622efa20dfe67500c92102682d9">hInstance</a>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    wcx.lpfnWndProc = <a class="code" href="../../d2/d4b/class_borderless_window.html#a8e85122ab76895d618b6d20cfea4e638">WndProc</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    wcx.hInstance = hInstance;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    wcx.lpfnWndProc = WndProc;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    wcx.cbClsExtra  = 0;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    wcx.cbWndExtra  = 0;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    wcx.lpszClassName = _T(<span class="stringliteral">&quot;WindowClass&quot;</span>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    wcx.hbrBackground = windowBackground;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    wcx.hCursor = LoadCursor( <a class="code" href="../../d2/d4b/class_borderless_window.html#aac4d2622efa20dfe67500c92102682d9">hInstance</a>, IDC_ARROW );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    wcx.hCursor = LoadCursor( hInstance, IDC_ARROW );</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    RegisterClassEx(&amp;wcx);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (FAILED(RegisterClassEx(&amp;wcx))) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Couldn&#39;t register window class&quot;</span>);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
@@ -153,32 +151,32 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> offsetX = (x - width) / 2;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> offsetY = (y - (y * 0.05) - height) / 2;    <span class="comment">// Compensate for taskbar</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a> = CreateWindow(_T(<span class="stringliteral">&quot;WindowClass&quot;</span>), _T(<span class="stringliteral">&quot;Project Ascension&quot;</span>), static_cast&lt;DWORD&gt;( <a class="code" href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ac1c67f0f96a2275e79270c506194dfc0">Style::windowed</a> ), offsetX, offsetY, width, height, 0, 0, <a class="code" href="../../d2/d4b/class_borderless_window.html#aac4d2622efa20dfe67500c92102682d9">hInstance</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    hWnd = CreateWindow(_T(<span class="stringliteral">&quot;WindowClass&quot;</span>), _T(<span class="stringliteral">&quot;Project Ascension&quot;</span>), static_cast&lt;DWORD&gt;( Style::windowed ), offsetX, offsetY, width, height, 0, 0, hInstance, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (!<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Encountered an unknown error while constructing the launcher window.&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (!hWnd) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Encountered an unknown error while constructing the launcher window.&quot;</span>);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SetWindowLongPtr(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, GWLP_USERDATA, reinterpret_cast&lt;LONG_PTR&gt;(<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast&lt;LONG_PTR&gt;(<span class="keyword">this</span>));</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mainPanel = <span class="keyword">new</span> <a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">g_winId</a> = (HWND)mainPanel-&gt;winId();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    mainPanel = <span class="keyword">new</span> <a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>(hWnd);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    g_winId = (HWND)mainPanel-&gt;winId();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301">show</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508">toggleBorderless</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    show();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    toggleBorderless();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    a = app;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#aa0ca450510d5c0d6b1044b035d7a7f5e">   61</a></span>&#160;<a class="code" href="../../d2/d4b/class_borderless_window.html#aa0ca450510d5c0d6b1044b035d7a7f5e">BorderlessWindow::~BorderlessWindow</a>()</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;BorderlessWindow::~BorderlessWindow()</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d2/d4b/class_borderless_window.html#aa2686cfb4a38db581d3ed12763b96e99">hide</a>();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    DestroyWindow(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    hide();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    DestroyWindow(hWnd);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../df/dd3/_borderless_window_8cpp.html#a231d154ada5e7c23bb851bf39e7066cd">   67</a></span>&#160;HDC <a class="code" href="../../df/dd3/_borderless_window_8cpp.html#a231d154ada5e7c23bb851bf39e7066cd">g_hdc</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../df/dd3/_borderless_window_8cpp.html#aacfac05127c7dbf6b2d01616c4276fa2">   68</a></span>&#160;PAINTSTRUCT <a class="code" href="../../df/dd3/_borderless_window_8cpp.html#aacfac05127c7dbf6b2d01616c4276fa2">g_ps</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;HDC g_hdc;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;PAINTSTRUCT g_ps;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a8e85122ab76895d618b6d20cfea4e638">   70</a></span>&#160;LRESULT CALLBACK <a class="code" href="../../d2/d4b/class_borderless_window.html#a8e85122ab76895d618b6d20cfea4e638">BorderlessWindow::WndProc</a>(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;LRESULT CALLBACK BorderlessWindow::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d2/d4b/class_borderless_window.html">BorderlessWindow</a>* window = <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="../../d2/d4b/class_borderless_window.html">BorderlessWindow</a>*<span class="keyword">&gt;</span>(GetWindowLongPtr(hWnd, GWLP_USERDATA));</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (!window) <span class="keywordflow">return</span> DefWindowProc(hWnd, message, wParam, lParam);</div>
@@ -196,21 +194,21 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">case</span> VK_F6:</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">toggleShadow</a>();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508">toggleBorderless</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            SetFocus(<a class="code" href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">g_winId</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            window-&gt;toggleShadow();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            window-&gt;toggleBorderless();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            SetFocus(g_winId);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">case</span> VK_F7:</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">toggleShadow</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            window-&gt;toggleShadow();</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">if</span> (wParam != VK_TAB) <span class="keywordflow">return</span> DefWindowProc(hWnd, message, wParam, lParam);</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        SetFocus(<a class="code" href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">g_winId</a>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        SetFocus(g_winId);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
@@ -361,14 +359,14 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        MINMAXINFO* minMaxInfo = (MINMAXINFO*)lParam;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">if</span> (window-&gt;minimumSize.required)</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            minMaxInfo-&gt;ptMinTrackSize.x = window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a312228a6ce5d03bdf92394419c6c5c87">getMinimumWidth</a>();;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            minMaxInfo-&gt;ptMinTrackSize.y = window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a35124db0bd716a0827f559910c4266ac">getMinimumHeight</a>();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            minMaxInfo-&gt;ptMinTrackSize.x = window-&gt;getMinimumWidth();;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            minMaxInfo-&gt;ptMinTrackSize.y = window-&gt;getMinimumHeight();</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">if</span> (window-&gt;maximumSize.required)</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            minMaxInfo-&gt;ptMaxTrackSize.x = window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#a0eefb93fabc9fb41fbba27f6237823e0">getMaximumWidth</a>();</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            minMaxInfo-&gt;ptMaxTrackSize.y = window-&gt;<a class="code" href="../../d2/d4b/class_borderless_window.html#afe12799d9dacc061b745c824138ad919">getMaximumHeight</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            minMaxInfo-&gt;ptMaxTrackSize.x = window-&gt;getMaximumWidth();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            minMaxInfo-&gt;ptMaxTrackSize.y = window-&gt;getMaximumHeight();</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
@@ -376,158 +374,130 @@ $(document).ready(function(){initNavTree('df/dd3/_borderless_window_8cpp_source.
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">return</span> DefWindowProc(hWnd, message, wParam, lParam);</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508">  268</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508">BorderlessWindow::toggleBorderless</a>()</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::toggleBorderless()</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;{</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">if</span> (visible)</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        Style newStyle = (borderless) ? <a class="code" href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ac1c67f0f96a2275e79270c506194dfc0">Style::windowed</a> : <a class="code" href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ace05d63c27456003a623935076dc034e">Style::aeroBorderless</a>;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        SetWindowLongPtr(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, GWL_STYLE, static_cast&lt;LONG&gt;(newStyle));</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        Style newStyle = (borderless) ? Style::windowed : Style::aeroBorderless;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        SetWindowLongPtr(hWnd, GWL_STYLE, static_cast&lt;LONG&gt;(newStyle));</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        borderless = !borderless;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (newStyle == <a class="code" href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ace05d63c27456003a623935076dc034e">Style::aeroBorderless</a>)</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span> (newStyle == Style::aeroBorderless)</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <a class="code" href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">toggleShadow</a>();</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            toggleShadow();</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        }</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">//redraw frame</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        SetWindowPos(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, 0, 0, 0, 0, 0, SWP_FRAMECHANGED | SWP_NOMOVE | SWP_NOSIZE);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <a class="code" href="../../d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301">show</a>();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        SetWindowPos(hWnd, 0, 0, 0, 0, 0, SWP_FRAMECHANGED | SWP_NOMOVE | SWP_NOSIZE);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        show();</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">  286</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">BorderlessWindow::toggleShadow</a>()</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::toggleShadow()</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;{</div>
 <div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">if</span> (borderless)</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    {</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        aeroShadow = !aeroShadow;</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">const</span> MARGINS c_shadowOn = {1, 1, 1, 1};</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">const</span> MARGINS c_shadowOff = {0, 0, 0, 0};</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        DwmExtendFrameIntoClientArea(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, (aeroShadow) ? (&amp;c_shadowOn) : (&amp;c_shadowOff));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        DwmExtendFrameIntoClientArea(hWnd, (aeroShadow) ? (&amp;c_shadowOn) : (&amp;c_shadowOff));</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    }</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#ae88611ce68d4cedab37af61a0b12af4e">  297</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#ae88611ce68d4cedab37af61a0b12af4e">BorderlessWindow::toggleResizeable</a>()</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::toggleResizeable()</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    borderlessResizeable = borderlessResizeable ? <span class="keyword">false</span> : <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a5d0ff82ba4399db588f314c1afb79798">  302</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a5d0ff82ba4399db588f314c1afb79798">BorderlessWindow::isResizeable</a>()</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="keywordtype">bool</span> BorderlessWindow::isResizeable()</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;{</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">return</span> borderlessResizeable ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;}</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div>
-<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301">  307</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301">BorderlessWindow::show</a>()</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::show()</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;{</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    ShowWindow(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, SW_SHOW);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    ShowWindow(hWnd, SW_SHOW);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    visible = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#aa2686cfb4a38db581d3ed12763b96e99">  313</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#aa2686cfb4a38db581d3ed12763b96e99">BorderlessWindow::hide</a>()</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::hide()</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;{</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    ShowWindow(<a class="code" href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">hWnd</a>, SW_HIDE);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    ShowWindow(hWnd, SW_HIDE);</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    visible = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a92eee138f9367fa4588c01cd5d76c574">  319</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a92eee138f9367fa4588c01cd5d76c574">BorderlessWindow::isVisible</a>()</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="keywordtype">bool</span> BorderlessWindow::isVisible()</div>
 <div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;{</div>
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">return</span> visible ? <span class="keyword">true</span> : <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="comment">// Minimum size</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#affe259e694c4902b865bd870717b011f">  325</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#affe259e694c4902b865bd870717b011f">BorderlessWindow::setMinimumSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::setMinimumSize(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    this-&gt;minimumSize.required = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    this-&gt;minimumSize.width = width;</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    this-&gt;minimumSize.height = height;</div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#ac1e19fc77aecf90753007dc66d30ba17">  332</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#ac1e19fc77aecf90753007dc66d30ba17">BorderlessWindow::isSetMinimumSize</a>()</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="keywordtype">bool</span> BorderlessWindow::isSetMinimumSize()</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;{</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">return</span> this-&gt;minimumSize.required;</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;}</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a6b5a511eb999d36af1de0560c382af75">  337</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a6b5a511eb999d36af1de0560c382af75">BorderlessWindow::removeMinimumSize</a>()</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::removeMinimumSize()</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    this-&gt;minimumSize.required = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    this-&gt;minimumSize.width = 0;</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    this-&gt;minimumSize.height = 0;</div>
 <div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a312228a6ce5d03bdf92394419c6c5c87">  344</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a312228a6ce5d03bdf92394419c6c5c87">BorderlessWindow::getMinimumWidth</a>()</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keywordtype">int</span> BorderlessWindow::getMinimumWidth()</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;{</div>
 <div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keywordflow">return</span> minimumSize.width;</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;}</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;</div>
-<div class="line"><a name="l00349"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a35124db0bd716a0827f559910c4266ac">  349</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a35124db0bd716a0827f559910c4266ac">BorderlessWindow::getMinimumHeight</a>()</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="keywordtype">int</span> BorderlessWindow::getMinimumHeight()</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;{</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">return</span> minimumSize.height;</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">// Maximum size</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a3b01e9234bb669a00dbffe057e1b5fd1">  355</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a3b01e9234bb669a00dbffe057e1b5fd1">BorderlessWindow::setMaximumSize</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::setMaximumSize(<span class="keyword">const</span> <span class="keywordtype">int</span> width, <span class="keyword">const</span> <span class="keywordtype">int</span> height)</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;{</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    this-&gt;maximumSize.required = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    this-&gt;maximumSize.width = width;</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    this-&gt;maximumSize.height = height;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div>
-<div class="line"><a name="l00362"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#aa3817bf4497fdc24729a46229ecd48b1">  362</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#aa3817bf4497fdc24729a46229ecd48b1">BorderlessWindow::isSetMaximumSize</a>()</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keywordtype">bool</span> BorderlessWindow::isSetMaximumSize()</div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;{</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> this-&gt;maximumSize.required;</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#aafccf70b3ca034a4474df9ca1d1a9b63">  367</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#aafccf70b3ca034a4474df9ca1d1a9b63">BorderlessWindow::removeMaximumSize</a>()</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keywordtype">void</span> BorderlessWindow::removeMaximumSize()</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;{</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    this-&gt;maximumSize.required = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    this-&gt;maximumSize.width = 0;</div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    this-&gt;maximumSize.height = 0;</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;}</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div>
-<div class="line"><a name="l00374"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#a0eefb93fabc9fb41fbba27f6237823e0">  374</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#a0eefb93fabc9fb41fbba27f6237823e0">BorderlessWindow::getMaximumWidth</a>()</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keywordtype">int</span> BorderlessWindow::getMaximumWidth()</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;{</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordflow">return</span> maximumSize.width;</div>
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;}</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno"><a class="line" href="../../d2/d4b/class_borderless_window.html#afe12799d9dacc061b745c824138ad919">  379</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d2/d4b/class_borderless_window.html#afe12799d9dacc061b745c824138ad919">BorderlessWindow::getMaximumHeight</a>()</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="keywordtype">int</span> BorderlessWindow::getMaximumHeight()</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;{</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">return</span> maximumSize.height;</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
-<div class="ttc" id="class_borderless_window_html_aac4d2622efa20dfe67500c92102682d9"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#aac4d2622efa20dfe67500c92102682d9">BorderlessWindow::hInstance</a></div><div class="ttdeci">HINSTANCE hInstance</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3e/_borderless_window_8h_source.html#l00022">BorderlessWindow.h:22</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a312228a6ce5d03bdf92394419c6c5c87"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a312228a6ce5d03bdf92394419c6c5c87">BorderlessWindow::getMinimumWidth</a></div><div class="ttdeci">int getMinimumWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00344">BorderlessWindow.cpp:344</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a0eefb93fabc9fb41fbba27f6237823e0"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a0eefb93fabc9fb41fbba27f6237823e0">BorderlessWindow::getMaximumWidth</a></div><div class="ttdeci">int getMaximumWidth()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00374">BorderlessWindow.cpp:374</a></div></div>
-<div class="ttc" id="class_borderless_window_html_aa0ca450510d5c0d6b1044b035d7a7f5e"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#aa0ca450510d5c0d6b1044b035d7a7f5e">BorderlessWindow::~BorderlessWindow</a></div><div class="ttdeci">~BorderlessWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00061">BorderlessWindow.cpp:61</a></div></div>
-<div class="ttc" id="_borderless_window_8h_html"><div class="ttname"><a href="../../d9/d3e/_borderless_window_8h.html">BorderlessWindow.h</a></div></div>
-<div class="ttc" id="class_borderless_window_html_afe12799d9dacc061b745c824138ad919"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#afe12799d9dacc061b745c824138ad919">BorderlessWindow::getMaximumHeight</a></div><div class="ttdeci">int getMaximumHeight()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00379">BorderlessWindow.cpp:379</a></div></div>
-<div class="ttc" id="class_borderless_window_html_afd2baf7c4e296fa9b0233a30a28b5e62ac1c67f0f96a2275e79270c506194dfc0"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ac1c67f0f96a2275e79270c506194dfc0">BorderlessWindow::Style::windowed</a></div></div>
-<div class="ttc" id="_borderless_window_8cpp_html_a28e15fc70401119bd6d9153e7fc920a9"><div class="ttname"><a href="../../df/dd3/_borderless_window_8cpp.html#a28e15fc70401119bd6d9153e7fc920a9">g_winId</a></div><div class="ttdeci">HWND g_winId</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00012">BorderlessWindow.cpp:12</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a32fd003f8b26ee6c33af334e5c6e8c0d"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a32fd003f8b26ee6c33af334e5c6e8c0d">BorderlessWindow::toggleShadow</a></div><div class="ttdeci">void toggleShadow()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00286">BorderlessWindow.cpp:286</a></div></div>
-<div class="ttc" id="_borderless_window_8cpp_html_a231d154ada5e7c23bb851bf39e7066cd"><div class="ttname"><a href="../../df/dd3/_borderless_window_8cpp.html#a231d154ada5e7c23bb851bf39e7066cd">g_hdc</a></div><div class="ttdeci">HDC g_hdc</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00067">BorderlessWindow.cpp:67</a></div></div>
-<div class="ttc" id="class_borderless_window_html_afb905e70408ef9ee0bf8cac6ad601dcb"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#afb905e70408ef9ee0bf8cac6ad601dcb">BorderlessWindow::BorderlessWindow</a></div><div class="ttdeci">BorderlessWindow(QApplication *app, HBRUSH windowBackground, const int width, const int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00017">BorderlessWindow.cpp:17</a></div></div>
-<div class="ttc" id="class_borderless_window_html_aa3817bf4497fdc24729a46229ecd48b1"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#aa3817bf4497fdc24729a46229ecd48b1">BorderlessWindow::isSetMaximumSize</a></div><div class="ttdeci">bool isSetMaximumSize()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00362">BorderlessWindow.cpp:362</a></div></div>
 <div class="ttc" id="class_borderless_window_html"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html">BorderlessWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3e/_borderless_window_8h_source.html#l00011">BorderlessWindow.h:11</a></div></div>
-<div class="ttc" id="class_borderless_window_html_affe259e694c4902b865bd870717b011f"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#affe259e694c4902b865bd870717b011f">BorderlessWindow::setMinimumSize</a></div><div class="ttdeci">void setMinimumSize(const int width, const int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00325">BorderlessWindow.cpp:325</a></div></div>
-<div class="ttc" id="_borderless_window_8cpp_html_aacfac05127c7dbf6b2d01616c4276fa2"><div class="ttname"><a href="../../df/dd3/_borderless_window_8cpp.html#aacfac05127c7dbf6b2d01616c4276fa2">g_ps</a></div><div class="ttdeci">PAINTSTRUCT g_ps</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00068">BorderlessWindow.cpp:68</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a6b5a511eb999d36af1de0560c382af75"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a6b5a511eb999d36af1de0560c382af75">BorderlessWindow::removeMinimumSize</a></div><div class="ttdeci">void removeMinimumSize()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00337">BorderlessWindow.cpp:337</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a8e85122ab76895d618b6d20cfea4e638"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a8e85122ab76895d618b6d20cfea4e638">BorderlessWindow::WndProc</a></div><div class="ttdeci">static LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00070">BorderlessWindow.cpp:70</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a146cbc139949df802e47fb0fc7216533"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a146cbc139949df802e47fb0fc7216533">BorderlessWindow::hWnd</a></div><div class="ttdeci">HWND hWnd</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3e/_borderless_window_8h_source.html#l00021">BorderlessWindow.h:21</a></div></div>
-<div class="ttc" id="class_borderless_window_html_aafccf70b3ca034a4474df9ca1d1a9b63"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#aafccf70b3ca034a4474df9ca1d1a9b63">BorderlessWindow::removeMaximumSize</a></div><div class="ttdeci">void removeMaximumSize()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00367">BorderlessWindow.cpp:367</a></div></div>
-<div class="ttc" id="class_borderless_window_html_ae88611ce68d4cedab37af61a0b12af4e"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#ae88611ce68d4cedab37af61a0b12af4e">BorderlessWindow::toggleResizeable</a></div><div class="ttdeci">void toggleResizeable()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00297">BorderlessWindow.cpp:297</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a35124db0bd716a0827f559910c4266ac"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a35124db0bd716a0827f559910c4266ac">BorderlessWindow::getMinimumHeight</a></div><div class="ttdeci">int getMinimumHeight()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00349">BorderlessWindow.cpp:349</a></div></div>
 <div class="ttc" id="class_win_window_html"><div class="ttname"><a href="../../d8/db8/class_win_window.html">WinWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7a/_win_window_8h_source.html#l00012">WinWindow.h:12</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a5d0ff82ba4399db588f314c1afb79798"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a5d0ff82ba4399db588f314c1afb79798">BorderlessWindow::isResizeable</a></div><div class="ttdeci">bool isResizeable()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00302">BorderlessWindow.cpp:302</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a05c1a418f92091bf2cc3c1b6be9dd508"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a05c1a418f92091bf2cc3c1b6be9dd508">BorderlessWindow::toggleBorderless</a></div><div class="ttdeci">void toggleBorderless()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00268">BorderlessWindow.cpp:268</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a3b01e9234bb669a00dbffe057e1b5fd1"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a3b01e9234bb669a00dbffe057e1b5fd1">BorderlessWindow::setMaximumSize</a></div><div class="ttdeci">void setMaximumSize(const int width, const int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00355">BorderlessWindow.cpp:355</a></div></div>
-<div class="ttc" id="class_borderless_window_html_afd2baf7c4e296fa9b0233a30a28b5e62ace05d63c27456003a623935076dc034e"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#afd2baf7c4e296fa9b0233a30a28b5e62ace05d63c27456003a623935076dc034e">BorderlessWindow::Style::aeroBorderless</a></div></div>
-<div class="ttc" id="class_borderless_window_html_aa2686cfb4a38db581d3ed12763b96e99"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#aa2686cfb4a38db581d3ed12763b96e99">BorderlessWindow::hide</a></div><div class="ttdeci">void hide()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00313">BorderlessWindow.cpp:313</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a3aa62557d68e481001499db15f9d0301"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a3aa62557d68e481001499db15f9d0301">BorderlessWindow::show</a></div><div class="ttdeci">void show()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00307">BorderlessWindow.cpp:307</a></div></div>
-<div class="ttc" id="class_borderless_window_html_a92eee138f9367fa4588c01cd5d76c574"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#a92eee138f9367fa4588c01cd5d76c574">BorderlessWindow::isVisible</a></div><div class="ttdeci">bool isVisible()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00319">BorderlessWindow.cpp:319</a></div></div>
-<div class="ttc" id="class_borderless_window_html_ac1e19fc77aecf90753007dc66d30ba17"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#ac1e19fc77aecf90753007dc66d30ba17">BorderlessWindow::isSetMinimumSize</a></div><div class="ttdeci">bool isSetMinimumSize()</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00332">BorderlessWindow.cpp:332</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../df/dd3/_borderless_window_8cpp.html">BorderlessWindow.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>BorderlessWindow.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

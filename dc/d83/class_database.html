@@ -115,11 +115,15 @@ $(document).ready(function(){initNavTree('dc/d83/class_database.html','../../');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="../../dc/d83/class_database.html" title="Database class. ">Database</a> class.  
+ <a href="../../dc/d83/class_database.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="../../d1/d94/_database_8h_source.html">Database.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4703c80e6969d33565ea340f768fdadf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf">Database</a> ()</td></tr>
+<tr class="memdesc:a4703c80e6969d33565ea340f768fdadf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a4703c80e6969d33565ea340f768fdadf">More...</a><br /></td></tr>
 <tr class="separator:a4703c80e6969d33565ea340f768fdadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8d83dd74fe50ae3c261479235c702a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">init</a> ()</td></tr>
 <tr class="separator:a7c8d83dd74fe50ae3c261479235c702a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,8 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abf7a45c86e57a5277cf8249e9c3169db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="../../d1/d94/_database_8h_source.html#l00014">14</a> of file <a class="el" href="../../d1/d94/_database_8h_source.html">Database.h</a>.</p>
+<div class="textblock"><p><a class="el" href="../../dc/d83/class_database.html" title="Database class. ">Database</a> class. </p>
+<p>Wrapper class to manage the internal game database. Also has a simple interface to find games by certain conditions. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4703c80e6969d33565ea340f768fdadf"></a>
 <div class="memitem">
@@ -157,7 +161,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00005">5</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Constructor. </p>
+<p>Constructs the local database. Currently no interface to handle remote databases, just creates on in the current working directory. </p>
 
 </div>
 </div>
@@ -191,8 +196,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Add a game to the database and repopulate the games list. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gameName</td><td>The name of the game. </td></tr>
+    <tr><td class="paramname">gameDirectory</td><td>Working directory of the game. </td></tr>
+    <tr><td class="paramname">executablePath</td><td>The location of the executable on the filesystem. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Success/failure of the operation. </dd></dl>
 
 </div>
 </div>
@@ -209,8 +221,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00058">58</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Perform a query to find a specific game in the database by their ID. Unsafe at the moment. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of the game to find. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../dd/db8/struct_game.html" title="Game type. ">Game</a> object upon success, 0 upon failure. </dd></dl>
 
 </div>
 </div>
@@ -227,8 +244,13 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00077">77</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Perform a query to find a specific game by their name. Unsafe at the moment. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the game to find. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="../../dd/db8/struct_game.html" title="Game type. ">Game</a> object upon success, 0 upon failure. </dd></dl>
 
 </div>
 </div>
@@ -244,8 +266,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00114">114</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Queries the database to find the number of games. </p><dl class="section return"><dt>Returns</dt><dd>Total number of games stored so far. </dd></dl>
 
 </div>
 </div>
@@ -261,17 +282,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dc/d83/class_database_a55b96f4463d01abb466546fa1058a44f_icgraph.png" border="0" usemap="#dc/d83/class_database_a55b96f4463d01abb466546fa1058a44f_icgraph" alt=""/></div>
-<map name="dc/d83/class_database_a55b96f4463d01abb466546fa1058a44f_icgraph" id="dc/d83/class_database_a55b96f4463d01abb466546fa1058a44f_icgraph">
-<area shape="rect" id="node2" href="../../d7/d55/class_library.html#a816427db28d4c342199b5fca4c0543b9" title="Library::Library" alt="" coords="216,5,339,32"/></map>
-</div>
-</p>
+<p>Perform a query to find every game in the database. </p><dl class="section return"><dt>Returns</dt><dd>A QList of <a class="el" href="../../dd/db8/struct_game.html" title="Game type. ">Game</a> objects containing everything in the database. </dd></dl>
 
 </div>
 </div>
@@ -287,17 +298,7 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00011">11</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dc/d83/class_database_a7c8d83dd74fe50ae3c261479235c702a_icgraph.png" border="0" usemap="#dc/d83/class_database_a7c8d83dd74fe50ae3c261479235c702a_icgraph" alt=""/></div>
-<map name="dc/d83/class_database_a7c8d83dd74fe50ae3c261479235c702a_icgraph" id="dc/d83/class_database_a7c8d83dd74fe50ae3c261479235c702a_icgraph">
-<area shape="rect" id="node2" href="../../d1/d88/class_main_panel.html#afdae445397b557a1b938c5d6fcc79e01" title="MainPanel::init" alt="" coords="168,5,285,32"/><area shape="rect" id="node3" href="../../d1/d88/class_main_panel.html#a1f02146ae9ae2c7555ff6c1b89e1b954" title="MainPanel::MainPanel" alt="" coords="333,5,497,32"/></map>
-</div>
-</p>
+<p>Initialize the actual database, if it hasn't been done already. </p><dl class="section return"><dt>Returns</dt><dd>Success/failure of the operation. </dd></dl>
 
 </div>
 </div>
@@ -314,8 +315,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Remove a game from the database by their ID. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>ID of the game to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Success/failure of the operation. </dd></dl>
 
 </div>
 </div>
@@ -332,8 +338,12 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Remove a game from the database by their name. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the game to remove </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -349,14 +359,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d3/dcb/_database_8cpp_source.html#l00026">26</a> of file <a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a>.</p>
+<p>Remove every table in the database. </p><dl class="section return"><dt>Returns</dt><dd>Success/failure of the operation. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/elken/build/client/Source/<a class="el" href="../../d1/d94/_database_8h_source.html">Database.h</a></li>
-<li>/home/elken/build/client/Source/<a class="el" href="../../d3/dcb/_database_8cpp_source.html">Database.cpp</a></li>
+<li>/home/elken/build/client/Source/Database.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -364,7 +373,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dc/d83/class_database.html">Database</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="footer">Generated on Sun Aug 2 2015 18:10:04 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

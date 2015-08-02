@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enterevent',['enterEvent',['../d2/dda/class_tab_label.html#afee256ed5f6ab84448ffb6ffe834cfa0',1,'TabLabel']]]
+  ['init',['init',['../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a',1,'Database']]]
 ];

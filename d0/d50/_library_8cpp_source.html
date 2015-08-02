@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,7 +107,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="title">Library.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/d50/_library_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dfc/_library_8h.html">Library.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Library.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;ui_Library.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
@@ -118,7 +116,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../d7/d55/class_library.html#a816427db28d4c342199b5fca4c0543b9">   10</a></span>&#160;<a class="code" href="../../d7/d55/class_library.html#a816427db28d4c342199b5fca4c0543b9">Library::Library</a>(<a class="code" href="../../dc/d83/class_database.html">Database</a> db) :</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;Library::Library(<a class="code" href="../../dc/d83/class_database.html">Database</a> db) :</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    QWidget(0),</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    db(db),</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    ui(new <a class="code" href="../../dc/df0/namespace_ui.html">Ui</a>::<a class="code" href="../../d7/d55/class_library.html">Library</a>),</div>
@@ -129,7 +127,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    connect(runningProcess, SIGNAL(finished(<span class="keywordtype">int</span>, QProcess::ExitStatus)), <span class="keyword">this</span>, SLOT(finished(<span class="keywordtype">int</span>, QProcess::ExitStatus)));</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    connect(runningProcess, SIGNAL(error(QProcess::ProcessError)), <span class="keyword">this</span>, SLOT(onLaunchError(QProcess::ProcessError)));</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QList&lt;Game&gt; games = db.<a class="code" href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">getGames</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QList&lt;Game&gt; games = db.getGames();</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> game : games)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        qDebug() &lt;&lt; game.id &lt;&lt; game.gameName &lt;&lt; game.gameDirectory &lt;&lt; game.executablePath;</div>
@@ -138,7 +136,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    refreshGames();</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d7/d55/class_library.html#a62120f28a9b50cc5b151d868e42ab936">   30</a></span>&#160;<a class="code" href="../../d7/d55/class_library.html#a62120f28a9b50cc5b151d868e42ab936">Library::~Library</a>()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Library::~Library()</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">delete</span> ui;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">delete</span> runningProcess;</div>
@@ -151,8 +149,8 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">auto</span> selection = ui-&gt;gameListWidget-&gt;currentItem();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (selection != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../dd/db8/struct_game.html">Game</a> game = db.<a class="code" href="../../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f">getGameByName</a>(selection-&gt;text());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            runProcess(game.<a class="code" href="../../dd/db8/struct_game.html#ad870943c9fa3d53f175fdf92f5a9881b">executablePath</a>, game.<a class="code" href="../../dd/db8/struct_game.html#a5a544cd9e4694e43fdf3fff9fd7417b3">gameDirectory</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="../../dd/db8/struct_game.html">Game</a> game = db.getGameByName(selection-&gt;text());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            runProcess(game.executablePath, game.gameDirectory);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span></div>
@@ -199,7 +197,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            QString dir = dirs.at(0);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            qDebug() &lt;&lt; <span class="stringliteral">&quot;Adding game:&quot;</span> &lt;&lt; name &lt;&lt; exe &lt;&lt; dir;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            db.<a class="code" href="../../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf">addGame</a>(name, dir, exe);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            db.addGame(name, dir, exe);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            refreshGames();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
@@ -211,7 +209,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">auto</span> selection = ui-&gt;gameListWidget-&gt;currentItem();</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">if</span> (selection != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        db.<a class="code" href="../../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b">removeGameByName</a>(selection-&gt;text());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        db.removeGameByName(selection-&gt;text());</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        refreshGames();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
@@ -233,7 +231,7 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> Library::refreshGames()</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    ui-&gt;gameListWidget-&gt;clear();</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    QList&lt;Game&gt; gameList = db.<a class="code" href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">getGames</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    QList&lt;Game&gt; gameList = db.getGames();</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> game : gameList)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        ui-&gt;gameListWidget-&gt;addItem(game.gameName);</div>
@@ -270,25 +268,16 @@ $(document).ready(function(){initNavTree('d0/d50/_library_8cpp_source.html','../
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">return</span> runningProcess-&gt;state() != QProcess::NotRunning;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 <div class="ttc" id="struct_game_html"><div class="ttname"><a href="../../dd/db8/struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d94/_database_8h_source.html#l00006">Database.h:6</a></div></div>
-<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="../../dc/df0/namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5e/_browser_8h_source.html#l00005">Browser.h:5</a></div></div>
-<div class="ttc" id="class_library_html_a816427db28d4c342199b5fca4c0543b9"><div class="ttname"><a href="../../d7/d55/class_library.html#a816427db28d4c342199b5fca4c0543b9">Library::Library</a></div><div class="ttdeci">Library(Database db)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d50/_library_8cpp_source.html#l00010">Library.cpp:10</a></div></div>
-<div class="ttc" id="class_database_html_a55b96f4463d01abb466546fa1058a44f"><div class="ttname"><a href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">Database::getGames</a></div><div class="ttdeci">QList&lt; Game &gt; getGames()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00097">Database.cpp:97</a></div></div>
-<div class="ttc" id="struct_game_html_ad870943c9fa3d53f175fdf92f5a9881b"><div class="ttname"><a href="../../dd/db8/struct_game.html#ad870943c9fa3d53f175fdf92f5a9881b">Game::executablePath</a></div><div class="ttdeci">QString executablePath</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d94/_database_8h_source.html#l00011">Database.h:11</a></div></div>
-<div class="ttc" id="struct_game_html_a5a544cd9e4694e43fdf3fff9fd7417b3"><div class="ttname"><a href="../../dd/db8/struct_game.html#a5a544cd9e4694e43fdf3fff9fd7417b3">Game::gameDirectory</a></div><div class="ttdeci">QString gameDirectory</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d94/_database_8h_source.html#l00010">Database.h:10</a></div></div>
-<div class="ttc" id="class_library_html_a62120f28a9b50cc5b151d868e42ab936"><div class="ttname"><a href="../../d7/d55/class_library.html#a62120f28a9b50cc5b151d868e42ab936">Library::~Library</a></div><div class="ttdeci">~Library()</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d50/_library_8cpp_source.html#l00030">Library.cpp:30</a></div></div>
-<div class="ttc" id="class_database_html_a6523dbf229c96c88e13ef3945ad01f3b"><div class="ttname"><a href="../../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b">Database::removeGameByName</a></div><div class="ttdeci">bool removeGameByName(QString name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00050">Database.cpp:50</a></div></div>
-<div class="ttc" id="class_database_html_ad8c60f1c8a4883a338d1d5183d40f90f"><div class="ttname"><a href="../../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f">Database::getGameByName</a></div><div class="ttdeci">Game getGameByName(QString name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00077">Database.cpp:77</a></div></div>
+<div class="ttc" id="namespace_ui_html"><div class="ttname"><a href="../../dc/df0/namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d5e/_browser_8h_source.html#l00007">Browser.h:7</a></div></div>
 <div class="ttc" id="class_database_html"><div class="ttname"><a href="../../dc/d83/class_database.html">Database</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d94/_database_8h_source.html#l00014">Database.h:14</a></div></div>
-<div class="ttc" id="_library_8h_html"><div class="ttname"><a href="../../db/dfc/_library_8h.html">Library.h</a></div></div>
-<div class="ttc" id="class_database_html_aa0cadb9933576000024ac2d103db18bf"><div class="ttname"><a href="../../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf">Database::addGame</a></div><div class="ttdeci">bool addGame(QString gameName, QString gameDirectory, QString executablePath)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00032">Database.cpp:32</a></div></div>
 <div class="ttc" id="class_library_html"><div class="ttname"><a href="../../d7/d55/class_library.html">Library</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/dfc/_library_8h_source.html#l00013">Library.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d0/d50/_library_8cpp.html">Library.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>Library.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

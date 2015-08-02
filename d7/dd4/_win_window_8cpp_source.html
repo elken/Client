@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,9 +107,9 @@ $(document).ready(function(){initNavTree('d7/dd4/_win_window_8cpp_source.html','
 <div class="title">WinWindow.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d7/dd4/_win_window_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d7a/_win_window_8h.html">WinWindow.h</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/dfc/_library_8h.html">Library.h</a>&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d5e/_browser_8h.html">Browser.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;WinWindow.h&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;Library.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Browser.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QGridLayout&gt;</span></div>
@@ -126,7 +124,7 @@ $(document).ready(function(){initNavTree('d7/dd4/_win_window_8cpp_source.html','
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;windowsx.h&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d8/db8/class_win_window.html#a0202882046787311be223531617524ea">   18</a></span>&#160;<a class="code" href="../../d8/db8/class_win_window.html#a0202882046787311be223531617524ea">WinWindow::WinWindow</a>(HWND hWnd) : QWinWidget(hWnd)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;WinWindow::WinWindow(HWND hWnd) : QWinWidget(hWnd)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    windowHandle = hWnd;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
@@ -183,7 +181,7 @@ $(document).ready(function(){initNavTree('d7/dd4/_win_window_8cpp_source.html','
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d8/db8/class_win_window.html#ac993eeacebd75b49fdfe6a90fe180557">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/db8/class_win_window.html#ac993eeacebd75b49fdfe6a90fe180557">WinWindow::mousePressEvent</a>(QMouseEvent *event)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> WinWindow::mousePressEvent(QMouseEvent *event)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (event-&gt;button() == Qt::LeftButton)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
@@ -210,12 +208,12 @@ $(document).ready(function(){initNavTree('d7/dd4/_win_window_8cpp_source.html','
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="../../d8/db8/class_win_window.html#a84a2fb8deba19139b71ad17f8c2e1fee">  102</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/db8/class_win_window.html#a84a2fb8deba19139b71ad17f8c2e1fee">WinWindow::minimize</a>()</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keywordtype">void</span> WinWindow::minimize()</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    ShowWindow(parentWindow(), SW_MINIMIZE);</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d8/db8/class_win_window.html#adccb69f545be0bb0635a62545258e619">  107</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/db8/class_win_window.html#adccb69f545be0bb0635a62545258e619">WinWindow::maximize</a>()</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> WinWindow::maximize()</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    WINDOWPLACEMENT wp;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    wp.length = <span class="keyword">sizeof</span>(WINDOWPLACEMENT);</div>
@@ -230,26 +228,18 @@ $(document).ready(function(){initNavTree('d7/dd4/_win_window_8cpp_source.html','
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d8/db8/class_win_window.html#a96353a265ce984eaadbdf863f72542c8">  122</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d8/db8/class_win_window.html#a96353a265ce984eaadbdf863f72542c8">WinWindow::closeWindow</a>()</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> WinWindow::closeWindow()</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    PostQuitMessage(0);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="ttc" id="class_win_window_html_a96353a265ce984eaadbdf863f72542c8"><div class="ttname"><a href="../../d8/db8/class_win_window.html#a96353a265ce984eaadbdf863f72542c8">WinWindow::closeWindow</a></div><div class="ttdeci">void closeWindow()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd4/_win_window_8cpp_source.html#l00122">WinWindow.cpp:122</a></div></div>
-<div class="ttc" id="class_win_window_html_a0202882046787311be223531617524ea"><div class="ttname"><a href="../../d8/db8/class_win_window.html#a0202882046787311be223531617524ea">WinWindow::WinWindow</a></div><div class="ttdeci">WinWindow(HWND hWnd)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd4/_win_window_8cpp_source.html#l00018">WinWindow.cpp:18</a></div></div>
 <div class="ttc" id="class_win_panel_html"><div class="ttname"><a href="../../d6/d55/class_win_panel.html">WinPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/_win_panel_8h_source.html#l00007">WinPanel.h:7</a></div></div>
-<div class="ttc" id="_win_window_8h_html"><div class="ttname"><a href="../../df/d7a/_win_window_8h.html">WinWindow.h</a></div></div>
-<div class="ttc" id="_browser_8h_html"><div class="ttname"><a href="../../d3/d5e/_browser_8h.html">Browser.h</a></div></div>
-<div class="ttc" id="class_win_window_html_a84a2fb8deba19139b71ad17f8c2e1fee"><div class="ttname"><a href="../../d8/db8/class_win_window.html#a84a2fb8deba19139b71ad17f8c2e1fee">WinWindow::minimize</a></div><div class="ttdeci">void minimize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd4/_win_window_8cpp_source.html#l00102">WinWindow.cpp:102</a></div></div>
-<div class="ttc" id="_library_8h_html"><div class="ttname"><a href="../../db/dfc/_library_8h.html">Library.h</a></div></div>
-<div class="ttc" id="class_win_window_html_adccb69f545be0bb0635a62545258e619"><div class="ttname"><a href="../../d8/db8/class_win_window.html#adccb69f545be0bb0635a62545258e619">WinWindow::maximize</a></div><div class="ttdeci">void maximize()</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd4/_win_window_8cpp_source.html#l00107">WinWindow.cpp:107</a></div></div>
-<div class="ttc" id="class_win_window_html_ac993eeacebd75b49fdfe6a90fe180557"><div class="ttname"><a href="../../d8/db8/class_win_window.html#ac993eeacebd75b49fdfe6a90fe180557">WinWindow::mousePressEvent</a></div><div class="ttdeci">void mousePressEvent(QMouseEvent *event)</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dd4/_win_window_8cpp_source.html#l00075">WinWindow.cpp:75</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d7/dd4/_win_window_8cpp.html">WinWindow.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>WinWindow.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

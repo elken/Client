@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,19 +107,19 @@ $(document).ready(function(){initNavTree('d5/d12/_main_8cpp_source.html','../../
 <div class="title">Main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d5/d12/_main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;QFontDatabase&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QSize&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifdef Q_OS_WIN</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d3e/_borderless_window_8h.html">BorderlessWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;BorderlessWindow.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d16/_unix_window_8h.html">UnixWindow.h</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;UnixWindow.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    QApplication::setStyle(<span class="stringliteral">&quot;fusion&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    QApplication* application = <span class="keyword">new</span> QApplication(argc, argv);</div>
@@ -173,7 +171,7 @@ $(document).ready(function(){initNavTree('d5/d12/_main_8cpp_source.html','../../
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">// Create a Win window</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="../../d2/d4b/class_borderless_window.html">BorderlessWindow</a> window(application, windowBackground, 1152, 648);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        window.<a class="code" href="../../d2/d4b/class_borderless_window.html#affe259e694c4902b865bd870717b011f">setMinimumSize</a>(830, 550);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        window.setMinimumSize(830, 550);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">    #else</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// Create a Unix window</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="../../d2/d2b/class_unix_window.html">UnixWindow</a> window;</div>
@@ -187,19 +185,15 @@ $(document).ready(function(){initNavTree('d5/d12/_main_8cpp_source.html','../../
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="ttc" id="_borderless_window_8h_html"><div class="ttname"><a href="../../d9/d3e/_borderless_window_8h.html">BorderlessWindow.h</a></div></div>
 <div class="ttc" id="class_borderless_window_html"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html">BorderlessWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d3e/_borderless_window_8h_source.html#l00011">BorderlessWindow.h:11</a></div></div>
-<div class="ttc" id="class_borderless_window_html_affe259e694c4902b865bd870717b011f"><div class="ttname"><a href="../../d2/d4b/class_borderless_window.html#affe259e694c4902b865bd870717b011f">BorderlessWindow::setMinimumSize</a></div><div class="ttdeci">void setMinimumSize(const int width, const int height)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd3/_borderless_window_8cpp_source.html#l00325">BorderlessWindow.cpp:325</a></div></div>
-<div class="ttc" id="_unix_window_8h_html"><div class="ttname"><a href="../../d3/d16/_unix_window_8h.html">UnixWindow.h</a></div></div>
-<div class="ttc" id="_main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="../../d5/d12/_main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d12/_main_8cpp_source.html#l00013">Main.cpp:13</a></div></div>
 <div class="ttc" id="class_unix_window_html"><div class="ttname"><a href="../../d2/d2b/class_unix_window.html">UnixWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d16/_unix_window_8h_source.html#l00005">UnixWindow.h:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d5/d12/_main_8cpp.html">Main.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>Main.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -48,7 +48,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -72,7 +71,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,17 +107,17 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="title">Database.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d3/dcb/_database_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d94/_database_8h.html">Database.h</a>&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Database.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf">    5</a></span>&#160;<a class="code" href="../../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf">Database::Database</a>() : db(QSqlDatabase::addDatabase(<span class="stringliteral">&quot;QSQLITE&quot;</span>))</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;Database::Database() : db(QSqlDatabase::addDatabase(<span class="stringliteral">&quot;QSQLITE&quot;</span>))</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    db.setHostName(<span class="stringliteral">&quot;localhost&quot;</span>);</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    db.setDatabaseName(<span class="stringliteral">&quot;ascension.db&quot;</span>);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">   11</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">Database::init</a>()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">bool</span> Database::init()</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> status = db.open();</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span> (!status)</div>
@@ -134,13 +132,13 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#aec44429a48d0b909cad5edee2539bccf">   26</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dc/d83/class_database.html#aec44429a48d0b909cad5edee2539bccf">Database::reset</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">bool</span> Database::reset()</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span>  query.exec(<span class="stringliteral">&quot;DROP TABLES *&quot;</span>);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf">   32</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf">Database::addGame</a>(QString gameName, QString gameDirectory, QString executablePath)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">bool</span> Database::addGame(QString gameName, QString gameDirectory, QString executablePath)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    query.prepare(<span class="stringliteral">&quot;INSERT INTO GAMES(GAMENAME, GAMEDIRECTORY, GAMEEXECUTABLE) VALUES (:gameName, :gameDirectory, :executablePath);&quot;</span>);</div>
@@ -150,7 +148,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> query.exec();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#af01f04fa637918a199045a4d8e67ebe5">   42</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dc/d83/class_database.html#af01f04fa637918a199045a4d8e67ebe5">Database::removeGameById</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">bool</span> Database::removeGameById(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    query.prepare(<span class="stringliteral">&quot;DELETE FROM GAMES WHERE ID = :id;&quot;</span>);</div>
@@ -158,7 +156,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span> query.exec();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b">   50</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b">Database::removeGameByName</a>(QString name)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">bool</span> Database::removeGameByName(QString name)</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    query.prepare(<span class="stringliteral">&quot;DELETE FROM GAMES WHERE GAMENAME = :name;&quot;</span>);</div>
@@ -166,7 +164,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> query.exec();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099">   58</a></span>&#160;<a class="code" href="../../dd/db8/struct_game.html">Game</a> <a class="code" href="../../dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099">Database::getGameById</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="../../dd/db8/struct_game.html">Game</a> Database::getGameById(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    query.prepare(<span class="stringliteral">&quot;SELECT GAMENAME, GAMEDIRECTORY, GAMEEXECUTABLE FROM GAMES WHERE ID = :id;&quot;</span>);</div>
@@ -185,7 +183,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> {id, name, path, exe};</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f">   77</a></span>&#160;<a class="code" href="../../dd/db8/struct_game.html">Game</a> <a class="code" href="../../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f">Database::getGameByName</a>(QString name)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="../../dd/db8/struct_game.html">Game</a> Database::getGameByName(QString name)</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    query.prepare(<span class="stringliteral">&quot;SELECT ID, GAMEDIRECTORY, GAMEEXECUTABLE FROM GAMES WHERE GAMENAME = :name;&quot;</span>);</div>
@@ -205,7 +203,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> game;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">   97</a></span>&#160;QList&lt;Game&gt; <a class="code" href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">Database::getGames</a>()</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;QList&lt;Game&gt; Database::getGames()</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    QList&lt;Game&gt; games;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    QSqlQuery query;</div>
@@ -222,7 +220,7 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">return</span> games;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db">  114</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db">Database::getGameCount</a>()</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Database::getGameCount()</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    QSqlQuery query(db);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    query.exec(<span class="stringliteral">&quot;SELECT count() FROM GAMES;&quot;</span>);</div>
@@ -234,24 +232,13 @@ $(document).ready(function(){initNavTree('d3/dcb/_database_8cpp_source.html','..
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">return</span> query.value(0).toInt();</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
 <div class="ttc" id="struct_game_html"><div class="ttname"><a href="../../dd/db8/struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d94/_database_8h_source.html#l00006">Database.h:6</a></div></div>
-<div class="ttc" id="class_database_html_a55b96f4463d01abb466546fa1058a44f"><div class="ttname"><a href="../../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f">Database::getGames</a></div><div class="ttdeci">QList&lt; Game &gt; getGames()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00097">Database.cpp:97</a></div></div>
-<div class="ttc" id="class_database_html_aec44429a48d0b909cad5edee2539bccf"><div class="ttname"><a href="../../dc/d83/class_database.html#aec44429a48d0b909cad5edee2539bccf">Database::reset</a></div><div class="ttdeci">bool reset()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00026">Database.cpp:26</a></div></div>
-<div class="ttc" id="class_database_html_af01f04fa637918a199045a4d8e67ebe5"><div class="ttname"><a href="../../dc/d83/class_database.html#af01f04fa637918a199045a4d8e67ebe5">Database::removeGameById</a></div><div class="ttdeci">bool removeGameById(unsigned int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00042">Database.cpp:42</a></div></div>
-<div class="ttc" id="class_database_html_a6523dbf229c96c88e13ef3945ad01f3b"><div class="ttname"><a href="../../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b">Database::removeGameByName</a></div><div class="ttdeci">bool removeGameByName(QString name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00050">Database.cpp:50</a></div></div>
-<div class="ttc" id="class_database_html_af4fd31e1db1e8611cb916c3dc1013099"><div class="ttname"><a href="../../dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099">Database::getGameById</a></div><div class="ttdeci">Game getGameById(unsigned int id)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00058">Database.cpp:58</a></div></div>
-<div class="ttc" id="class_database_html_a7c8d83dd74fe50ae3c261479235c702a"><div class="ttname"><a href="../../dc/d83/class_database.html#a7c8d83dd74fe50ae3c261479235c702a">Database::init</a></div><div class="ttdeci">bool init()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00011">Database.cpp:11</a></div></div>
-<div class="ttc" id="class_database_html_ad8c60f1c8a4883a338d1d5183d40f90f"><div class="ttname"><a href="../../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f">Database::getGameByName</a></div><div class="ttdeci">Game getGameByName(QString name)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00077">Database.cpp:77</a></div></div>
-<div class="ttc" id="_database_8h_html"><div class="ttname"><a href="../../d1/d94/_database_8h.html">Database.h</a></div></div>
-<div class="ttc" id="class_database_html_abf7a45c86e57a5277cf8249e9c3169db"><div class="ttname"><a href="../../dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db">Database::getGameCount</a></div><div class="ttdeci">unsigned int getGameCount()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00114">Database.cpp:114</a></div></div>
-<div class="ttc" id="class_database_html_aa0cadb9933576000024ac2d103db18bf"><div class="ttname"><a href="../../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf">Database::addGame</a></div><div class="ttdeci">bool addGame(QString gameName, QString gameDirectory, QString executablePath)</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00032">Database.cpp:32</a></div></div>
-<div class="ttc" id="class_database_html_a4703c80e6969d33565ea340f768fdadf"><div class="ttname"><a href="../../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf">Database::Database</a></div><div class="ttdeci">Database()</div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dcb/_database_8cpp_source.html#l00005">Database.cpp:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d3/dcb/_database_8cpp.html">Database.cpp</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>Database.cpp</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 16:17:01 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

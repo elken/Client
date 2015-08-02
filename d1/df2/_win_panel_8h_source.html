@@ -72,7 +72,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="../../files.html"><span>File&#160;List</span></a></li>
-      <li><a href="../../globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -109,9 +108,9 @@ $(document).ready(function(){initNavTree('d1/df2/_win_panel_8h_source.html','../
 <div class="title">WinPanel.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d1/df2/_win_panel_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/d84/_main_panel_8h.html">MainPanel.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;MainPanel.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -120,32 +119,27 @@ $(document).ready(function(){initNavTree('d1/df2/_win_panel_8h_source.html','../
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../d6/d55/class_win_panel.html#a8f9d63debe586788e80decb26f99b845">WinPanel</a>(<a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>* panel);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../d6/d55/class_win_panel.html">WinPanel</a>(<a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>* panel);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/d55/class_win_panel.html#a771a0fe747c4f888fd9cfddd9d977858">pushButtonMinimize</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/d55/class_win_panel.html#a66688e1f77a95659388806072db39697">pushButtonMaximize</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/d55/class_win_panel.html#ad48b22a2b7c06e676c4551517f18c5ea">pushButtonClose</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> pushButtonMinimize();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> pushButtonMaximize();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> pushButtonClose();</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="../../d8/db8/class_win_window.html">WinWindow</a>* winPanel;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="ttc" id="_main_panel_8h_html"><div class="ttname"><a href="../../d0/d84/_main_panel_8h.html">MainPanel.h</a></div></div>
-<div class="ttc" id="class_win_panel_html_a771a0fe747c4f888fd9cfddd9d977858"><div class="ttname"><a href="../../d6/d55/class_win_panel.html#a771a0fe747c4f888fd9cfddd9d977858">WinPanel::pushButtonMinimize</a></div><div class="ttdeci">void pushButtonMinimize()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/_win_panel_8cpp_source.html#l00011">WinPanel.cpp:11</a></div></div>
-<div class="ttc" id="class_win_panel_html"><div class="ttname"><a href="../../d6/d55/class_win_panel.html">WinPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/df2/_win_panel_8h_source.html#l00007">WinPanel.h:7</a></div></div>
-<div class="ttc" id="class_win_panel_html_a8f9d63debe586788e80decb26f99b845"><div class="ttname"><a href="../../d6/d55/class_win_panel.html#a8f9d63debe586788e80decb26f99b845">WinPanel::WinPanel</a></div><div class="ttdeci">WinPanel(WinWindow *panel)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/_win_panel_8cpp_source.html#l00004">WinPanel.cpp:4</a></div></div>
-<div class="ttc" id="class_main_panel_html"><div class="ttname"><a href="../../d1/d88/class_main_panel.html">MainPanel</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d84/_main_panel_8h_source.html#l00015">MainPanel.h:15</a></div></div>
-<div class="ttc" id="class_win_window_html"><div class="ttname"><a href="../../d8/db8/class_win_window.html">WinWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../df/d7a/_win_window_8h_source.html#l00012">WinWindow.h:12</a></div></div>
-<div class="ttc" id="class_win_panel_html_a66688e1f77a95659388806072db39697"><div class="ttname"><a href="../../d6/d55/class_win_panel.html#a66688e1f77a95659388806072db39697">WinPanel::pushButtonMaximize</a></div><div class="ttdeci">void pushButtonMaximize()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/_win_panel_8cpp_source.html#l00016">WinPanel.cpp:16</a></div></div>
-<div class="ttc" id="class_win_panel_html_ad48b22a2b7c06e676c4551517f18c5ea"><div class="ttname"><a href="../../d6/d55/class_win_panel.html#ad48b22a2b7c06e676c4551517f18c5ea">WinPanel::pushButtonClose</a></div><div class="ttdeci">void pushButtonClose()</div><div class="ttdef"><b>Definition:</b> <a href="../../db/ddf/_win_panel_8cpp_source.html#l00021">WinPanel.cpp:21</a></div></div>
+<div class="ttc" id="class_win_panel_html"><div class="ttname"><a href="../../d6/d55/class_win_panel.html">WinPanel</a></div><div class="ttdef"><b>Definition:</b> WinPanel.h:7</div></div>
+<div class="ttc" id="class_main_panel_html"><div class="ttname"><a href="../../d1/d88/class_main_panel.html">MainPanel</a></div><div class="ttdef"><b>Definition:</b> MainPanel.h:15</div></div>
+<div class="ttc" id="class_win_window_html"><div class="ttname"><a href="../../d8/db8/class_win_window.html">WinWindow</a></div><div class="ttdef"><b>Definition:</b> WinWindow.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><a class="el" href="../../d1/df2/_win_panel_8h.html">WinPanel.h</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 14:48:51 for Project Ascension by
+    <li class="navelem"><a class="el" href="../../dir_db3a54907829b36871118d03417739cd.html">client</a></li><li class="navelem"><a class="el" href="../../dir_d5175ca511ce3ee28071df592a4b17a6.html">Source</a></li><li class="navelem"><b>WinPanel.h</b></li>
+    <li class="footer">Generated on Sun Aug 2 2015 18:10:04 for Project Ascension by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
