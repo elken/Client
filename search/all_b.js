@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ui',['Ui',['../dc/df0/namespace_ui.html',1,'']]],
-  ['unixpanel',['UnixPanel',['../de/d68/class_unix_panel.html',1,'']]],
-  ['unixwindow',['UnixWindow',['../d2/d2b/class_unix_window.html',1,'']]]
+  ['sha',['sha',['../d8/dba/struct_steam_vdf_parse_1_1_game_header.html#a09165aa83be7649ab247574b167ee4bd',1,'SteamVdfParse::GameHeader']]],
+  ['size',['size',['../d8/dba/struct_steam_vdf_parse_1_1_game_header.html#a513456912c7a339b10c51a32b82f777e',1,'SteamVdfParse::GameHeader']]],
+  ['steamvdfparse',['SteamVdfParse',['../db/d3c/namespace_steam_vdf_parse.html',1,'']]]
 ];

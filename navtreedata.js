@@ -2,7 +2,11 @@ var NAVTREE =
 [
   [ "Project Ascension", "index.html", [
     [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ]
+      [ "Namespace List", "namespaces.html", "namespaces" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
     ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
@@ -22,7 +26,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-".html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

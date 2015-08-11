@@ -1,7 +1,7 @@
 var class_database =
 [
     [ "Database", "dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf", null ],
-    [ "addGame", "dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf", null ],
+    [ "addGame", "dc/d83/class_database.html#ade517bf453e5563aced153157a28ac02", null ],
     [ "getGameById", "dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099", null ],
     [ "getGameByName", "dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f", null ],
     [ "getGameCount", "dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db", null ],

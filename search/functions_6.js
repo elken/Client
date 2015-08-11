@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['removegamebyid',['removeGameById',['../dc/d83/class_database.html#af01f04fa637918a199045a4d8e67ebe5',1,'Database']]],
-  ['removegamebyname',['removeGameByName',['../dc/d83/class_database.html#a6523dbf229c96c88e13ef3945ad01f3b',1,'Database']]],
-  ['reset',['reset',['../dc/d83/class_database.html#aec44429a48d0b909cad5edee2539bccf',1,'Database']]]
+  ['parsegame',['parseGame',['../db/d3c/namespace_steam_vdf_parse.html#af537b678a5239846f4bd8a2da29010da',1,'SteamVdfParse']]],
+  ['parsesection',['parseSection',['../db/d3c/namespace_steam_vdf_parse.html#a592a672f4060d1eeddb3211515aee3a2',1,'SteamVdfParse']]],
+  ['parsevdf',['parseVdf',['../db/d3c/namespace_steam_vdf_parse.html#afb987bd795dc65a59a8a4e56e373477f',1,'SteamVdfParse']]]
 ];

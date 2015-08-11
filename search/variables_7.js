@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['libraryptr',['libraryPtr',['../d1/d88/class_main_panel.html#a8a2de08e17615f182aa434abde08cf88',1,'MainPanel']]],
-  ['librarytab',['libraryTab',['../d1/d88/class_main_panel.html#adbad769e354f684da54563b9b92fe6ba',1,'MainPanel']]]
+  ['sha',['sha',['../d8/dba/struct_steam_vdf_parse_1_1_game_header.html#a09165aa83be7649ab247574b167ee4bd',1,'SteamVdfParse::GameHeader']]],
+  ['size',['size',['../d8/dba/struct_steam_vdf_parse_1_1_game_header.html#a513456912c7a339b10c51a32b82f777e',1,'SteamVdfParse::GameHeader']]]
 ];

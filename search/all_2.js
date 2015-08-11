@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['database',['Database',['../dc/d83/class_database.html',1,'Database'],['../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf',1,'Database::Database()']]]
+  ['changenumber',['changeNumber',['../d8/dba/struct_steam_vdf_parse_1_1_game_header.html#a3a1a0a2d2388ac860dcbc1a6347c6ba1',1,'SteamVdfParse::GameHeader']]]
 ];

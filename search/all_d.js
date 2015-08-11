@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['_7ebrowser',['~Browser',['../db/dc8/class_browser.html#a53b7061ec24c8189cfd72a6bed8ef6b7',1,'Browser']]]
+  ['ui',['Ui',['../dc/df0/namespace_ui.html',1,'']]],
+  ['unixpanel',['UnixPanel',['../de/d68/class_unix_panel.html',1,'']]],
+  ['unixwindow',['UnixWindow',['../d2/d2b/class_unix_window.html',1,'']]]
 ];

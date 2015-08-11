@@ -1,11 +1,4 @@
 var searchData=
 [
-  ['game',['Game',['../d1/da1/struct_steam_vdf_parse_1_1_game.html',1,'SteamVdfParse']]],
-  ['game',['Game',['../dd/db8/struct_game.html',1,'']]],
-  ['gamedirectory',['gameDirectory',['../dd/db8/struct_game.html#a5a544cd9e4694e43fdf3fff9fd7417b3',1,'Game']]],
-  ['gamename',['gameName',['../dd/db8/struct_game.html#a2dc75f118e0b9b79715efb8fa7881dc2',1,'Game']]],
-  ['getgamebyid',['getGameById',['../dc/d83/class_database.html#af4fd31e1db1e8611cb916c3dc1013099',1,'Database']]],
-  ['getgamebyname',['getGameByName',['../dc/d83/class_database.html#ad8c60f1c8a4883a338d1d5183d40f90f',1,'Database']]],
-  ['getgamecount',['getGameCount',['../dc/d83/class_database.html#abf7a45c86e57a5277cf8249e9c3169db',1,'Database']]],
-  ['getgames',['getGames',['../dc/d83/class_database.html#a55b96f4463d01abb466546fa1058a44f',1,'Database']]]
+  ['executablepath',['executablePath',['../dd/db8/struct_game.html#ad870943c9fa3d53f175fdf92f5a9881b',1,'Game']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addgame',['addGame',['../dc/d83/class_database.html#aa0cadb9933576000024ac2d103db18bf',1,'Database']]]
+  ['addgame',['addGame',['../dc/d83/class_database.html#ade517bf453e5563aced153157a28ac02',1,'Database']]]
 ];

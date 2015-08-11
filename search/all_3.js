@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['executablepath',['executablePath',['../dd/db8/struct_game.html#ad870943c9fa3d53f175fdf92f5a9881b',1,'Game']]]
+  ['database',['Database',['../dc/d83/class_database.html',1,'Database'],['../dc/d83/class_database.html#a4703c80e6969d33565ea340f768fdadf',1,'Database::Database()']]]
 ];

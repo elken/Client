@@ -1,9 +1,6 @@
 var annotated =
 [
-    [ "SteamVdfParse", null, [
-      [ "Game", "d1/da1/struct_steam_vdf_parse_1_1_game.html", "d1/da1/struct_steam_vdf_parse_1_1_game" ],
-      [ "Section", "db/d36/struct_steam_vdf_parse_1_1_section.html", "db/d36/struct_steam_vdf_parse_1_1_section" ]
-    ] ],
+    [ "SteamVdfParse", "db/d3c/namespace_steam_vdf_parse.html", "db/d3c/namespace_steam_vdf_parse" ],
     [ "BorderlessWindow", "d2/d4b/class_borderless_window.html", "d2/d4b/class_borderless_window" ],
     [ "Browser", "db/dc8/class_browser.html", "db/dc8/class_browser" ],
     [ "Database", "dc/d83/class_database.html", "dc/d83/class_database" ],
