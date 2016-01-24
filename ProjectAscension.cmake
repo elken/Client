@@ -53,6 +53,8 @@ set(GUI_WIZARDS
     src/gui/wizards/add_game_wizard.h
     src/gui/wizards/drm_setup_wizard.cpp
     src/gui/wizards/drm_setup_wizard.h
+    src/gui/wizards/ascension_wizard.cpp
+    src/gui/wizards/ascension_wizard.h
 )
 
 set(RESOURCES

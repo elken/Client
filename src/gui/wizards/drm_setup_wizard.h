@@ -26,6 +26,8 @@ class DRMSetupWizard : public QWizard
     Q_OBJECT
 public:
     DRMSetupWizard(QWidget* parent = 0);
+private:
+    QSettings* palette;
 };
 
 /** IntroPage class.
