@@ -1,0 +1,31 @@
+sudo: false
+language: cpp
+addons:
+	apt:
+		sources:
+		- ubuntu-toolchain-r-test
+		- kalakris-cmake
+		- ubuntu-sdk-team
+		- boost-latest
+		packages:
+		- cmake
+		- qtbase5-dev
+		- qtdeclarative5-dev
+		- libqt5webkit5-dev
+		- libqt5gui5
+		- libboost1.55-dev
+		- ninja-build
+		- gcc-4.8
+		- g++-4.8
+compiler:
+- g++
+install:
+- sudo sed -i -e 's/COPY_ONLY/COPYONLY/g' /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake
+- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+before_script:
+- cmake . -G "Ninja"
+script:
+- ninja
+os:
+- linux
+- osx
