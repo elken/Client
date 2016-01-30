@@ -18,11 +18,10 @@ addons:
     - libqt5gui5
     - libboost1.55-dev
     - ninja-build
-    - gcc-4.8
-    - g++-4.8
+    - clang
     - ccache
 compiler:
-- g++
+- clang
 before_script:
 - cmake .
 script:
