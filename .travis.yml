@@ -7,7 +7,7 @@ addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
-    - george-edison55-precise-backports
+    - debian-sid
     - ubuntu-sdk-team
     - boost-latest
     packages:
