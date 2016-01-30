@@ -4,7 +4,6 @@ cache: ccache
 compiler:
 - clang
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update         ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5    ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja  ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache ; fi
