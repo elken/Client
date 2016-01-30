@@ -1,37 +1,17 @@
 sudo: false
 language: cpp
-cache: 
-- apt
-- ccache
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    - debian-sid
-    - ubuntu-sdk-team
-    - boost-latest
-    packages:
-    - cmake
-    - qtbase5-dev
-    - qtdeclarative5-dev
-    - libqt5webkit5-dev
-    - libqt5gui5
-    - libboost1.55-dev
-    - ninja-build
-    - clang
-    - ccache
+cache: ccache
 compiler:
 - clang
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update      ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5 ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install boost ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update         ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5    ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja  ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache ; fi
 
 before_script:
-- cmake .
+- cmake . -G "Ninja"
 script:
-- ccache make -j$(expr $(nproc) + 1)
+- ccache ninja
 os:
-- linux
 - osx
