@@ -1,5 +1,8 @@
 sudo: false
 language: cpp
+cache: 
+- apt
+- ccache
 addons:
   apt:
     sources:
@@ -17,6 +20,7 @@ addons:
     - ninja-build
     - gcc-4.8
     - g++-4.8
+    - ccache
 compiler:
 - g++
 install:
@@ -25,7 +29,7 @@ install:
 before_script:
 - cmake . -G "Ninja"
 script:
-- ninja
+- ccache ninja
 os:
 - linux
 - osx
