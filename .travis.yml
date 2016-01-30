@@ -24,9 +24,9 @@ addons:
 compiler:
 - g++
 before_script:
-- cmake . -G "Ninja"
+- cmake .
 script:
-- ccache ninja
+- ccache make -j$(expr $(nproc) + 1)
 os:
 - linux
 - osx
