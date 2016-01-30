@@ -1,22 +1,22 @@
 sudo: false
 language: cpp
 addons:
-	apt:
-		sources:
-		- ubuntu-toolchain-r-test
-		- kalakris-cmake
-		- ubuntu-sdk-team
-		- boost-latest
-		packages:
-		- cmake
-		- qtbase5-dev
-		- qtdeclarative5-dev
-		- libqt5webkit5-dev
-		- libqt5gui5
-		- libboost1.55-dev
-		- ninja-build
-		- gcc-4.8
-		- g++-4.8
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    - kalakris-cmake
+    - ubuntu-sdk-team
+    - boost-latest
+    packages:
+    - cmake
+    - qtbase5-dev
+    - qtdeclarative5-dev
+    - libqt5webkit5-dev
+    - libqt5gui5
+    - libboost1.55-dev
+    - ninja-build
+    - gcc-4.8
+    - g++-4.8
 compiler:
 - g++
 install:
