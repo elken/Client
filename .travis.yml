@@ -23,9 +23,6 @@ addons:
     - ccache
 compiler:
 - g++
-install:
-- sudo sed -i -e 's/COPY_ONLY/COPYONLY/g' /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake
-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
 before_script:
 - cmake . -G "Ninja"
 script:
