@@ -3,7 +3,6 @@ addons:
   apt:
     sources:
     - george-edison55-precise-backports
-    - debian-sid
     - ubuntu-toolchain-r-test
     - ubuntu-sdk-team
     - boost-latest
@@ -16,8 +15,7 @@ addons:
     - libqt5gui5
     - libboost1.55-dev
     - ninja-build
-    - gcc-4.8
-    - g++-4.8
+    - clang
     - ccache
 language: cpp
 cache: 
