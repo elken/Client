@@ -1,38 +1,14 @@
 sudo: false
-addons:
-  apt:
-    sources:
-    - george-edison55-precise-backports
-    - ubuntu-toolchain-r-test
-    - ubuntu-sdk-team
-    - boost-latest
-    packages:
-    - cmake
-    - cmake-data
-    - qtbase5-dev
-    - qtdeclarative5-dev
-    - libqt5webkit5-dev
-    - libqt5gui5
-    - libboost1.55-dev
-    - ninja-build
-    - clang
-    - ccache
-    - g++-5
-    - gcc-5
 language: cpp
-cache: 
-- apt
-- ccache
-compiler: g++-5
+cache: ccache
+compiler: clang
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5    ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja  ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ccache ; fi
-  
 before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cmake . -G "Ninja" -DCMAKE_PREFIX_PATH="/usr/local/opt/qt5/lib/cmake"; else cmake . -G "Ninja"; fi
+  - cmake . -G "Ninja" -DCMAKE_PREFIX_PATH="/usr/local/opt/qt5/lib/cmake"
 script:
 - ccache ninja
 os:
 - osx
-- linux
