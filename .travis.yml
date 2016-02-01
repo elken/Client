@@ -17,11 +17,13 @@ addons:
     - ninja-build
     - clang
     - ccache
+    - g++-4.8
+    - gcc-4.8
 language: cpp
 cache: 
 - apt
 - ccache
-compiler: clang
+compiler: g++
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5    ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja  ; fi
