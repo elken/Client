@@ -23,7 +23,7 @@ language: cpp
 cache: 
 - apt
 - ccache
-compiler: g++
+compiler: g++-4.8
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install qt5    ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install ninja  ; fi
