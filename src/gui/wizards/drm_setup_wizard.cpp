@@ -1,5 +1,6 @@
 #include "drm_setup_wizard.h"
 #include <libs/steam_vdf_parse.hpp>
+#include <easylogging++.h>
 
 #include <thread>
 #include <future>
@@ -14,6 +15,7 @@ GameList addedVector;
  */
 DRMSetupWizard::DRMSetupWizard(QWidget* parent) : QWizard(parent)
 {
+    LOG(DEBUG) << "Testing DRM setup";
     std::map<std::string, DRMType*> drmMap;
     SteamDRM* steam = new SteamDRM;
     OriginDRM* origin = new OriginDRM;

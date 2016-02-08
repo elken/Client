@@ -9,11 +9,13 @@
 
 #endif
 
+
 int main(int argc, char* argv[])
 {
+    initLogging();
     QCoreApplication::addLibraryPath("./");
     QCoreApplication::addLibraryPath("./plugins");
-
+    LOG(DEBUG) << "Testing main";
     QApplication::setStyle("fusion");
     QApplication* application = new QApplication(argc, argv);
     bool dbExists = QFile("ascension.db").exists();

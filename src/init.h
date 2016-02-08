@@ -1,3 +1,5 @@
+#include <easylogging++.h>
+
 #include <QApplication>
 #include <QFontDatabase>
 #include <QSettings>
@@ -6,6 +8,25 @@
 #include <QDir>
 #include <QStandardPaths>
 #include <QDebug>
+
+INITIALIZE_EASYLOGGINGPP
+
+void initLogging()
+{
+    el::Configurations defaultConf;
+    defaultConf.setToDefault();
+    defaultConf.set(el::Level::Global, el::ConfigurationType::ToFile, "true");
+    defaultConf.set(el::Level::Global, el::ConfigurationType::Filename, "logs/client.log");
+    defaultConf.set(el::Level::Global, el::ConfigurationType::MaxLogFileSize, "2097152");
+    defaultConf.set(el::Level::Global, el::ConfigurationType::LogFlushThreshold, "100");
+    defaultConf.set(el::Level::Global, el::ConfigurationType::ToStandardOutput, "false");
+    defaultConf.set(el::Level::Debug, el::ConfigurationType::Format, "%datetime [%func] in [%fbase:%line] \"%msg\"");
+    defaultConf.set(el::Level::Debug, el::ConfigurationType::ToStandardOutput, "true");
+    defaultConf.set(el::Level::Info, el::ConfigurationType::Format, "%datetime{%d/%M} %level %msg");
+    el::Loggers::reconfigureLogger("default", defaultConf);
+    LOG(DEBUG) << "Testing init logging";
+    LOG(INFO) << "Log using default file";
+}
 
 void initSettings(QApplication &application)
 {
