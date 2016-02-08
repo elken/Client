@@ -8,12 +8,16 @@
 /** UplayDRM constructor
  * Sets the DRM string.
 */
-UplayDRM::UplayDRM() : DRMType("<b>Uplay</b>"){}
+UplayDRM::UplayDRM() : DRMType("<b>Uplay</b>")
+{
+    statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
+    descLabel = new QLabel("Uplay not found on the system. Verify installation and try again.");
+}
 
 /** Check if Uplay exists on the filesystem or not and adjust the various class
  * variables accordingly.
  */
-void UplayDRM::checkUplayExists()
+void UplayDRM::checkExists()
 {
     QDir uplayFolder;
     QDir uplayRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append("/Ubisoft Game Launcher");
@@ -60,11 +64,6 @@ void UplayDRM::checkUplayExists()
         descLabel = new QLabel("Uplay found in " + uplayFolder.filePath(""));
         this->setIsInstalled();
         this->setRootDir(uplayFolder);
-    }
-    else
-    {
-        statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
-        descLabel = new QLabel("Uplay not found on the system. Verify installation and try again.");
     }
 }
 

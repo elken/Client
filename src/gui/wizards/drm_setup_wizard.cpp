@@ -23,11 +23,11 @@ DRMSetupWizard::DRMSetupWizard(QWidget* parent) : QWizard(parent)
     steam->checkExists();
 
 #if defined(_WIN32) || defined(_WIN64) || defined(__APPLE__)
-    origin->checkOriginExists();
+    origin->checkExists();
 #endif
 
 #if defined(_WIN32) || defined (_WIN64)
-    uplay->checkUplayExists();
+    uplay->checkExists();
 #endif
 
     drmMap.insert(std::make_pair("Steam", steam));
@@ -116,6 +116,8 @@ void ResultsPage::initializePage()
         }
         else
         {
+            std::vector<std::future<void>> futureVec;
+
             QProgressDialog* dialog = new QProgressDialog(this);
             dialog->setCancelButtonText("Cancel");
             dialog->setRange(0, 3);
@@ -126,13 +128,39 @@ void ResultsPage::initializePage()
             dialog->setValue(0);
             QApplication::processEvents();
 
+            if (steam->getIsInstalled())
+            {
+                futureVec.push_back(std::async(std::launch::async, &SteamDRM::findGames, steam));
+            }
+
+            if (origin->getIsInstalled())
+            {
+                futureVec.push_back(std::async(std::launch::async, &OriginDRM::findGames, origin));
+            }
+
+            if (uplay->getIsInstalled())
+            {
+                futureVec.push_back(std::async(std::launch::async, &UplayDRM::findGames, uplay));
+            }
+
+
+            int vecCount = 0;
+            for (auto& i : futureVec)
+            {
+                i.get();
+                vecCount++;
+                dialog->setValue(vecCount);
+                QApplication::processEvents();
+            }
+
+            dialog->close();
+
             tabWidget = new QTabWidget(this);
             topLayout = new QGridLayout(this);
             setSubTitle("Change the title for each game by clicking the text box and editing.");
 
             if (steam->getIsInstalled())
             {
-                steam->findGames();
                 GameList steamVector = steam->getGames();
                 if (uplay->getIsInstalled() && origin->getIsInstalled())
                 {
@@ -148,12 +176,9 @@ void ResultsPage::initializePage()
                 }
                 tabWidget->addTab(steam->createPane(this), "Steam");
             }
-            dialog->setValue(1);
-            QApplication::processEvents();
 
             if (origin->getIsInstalled())
             {
-                origin->findGames();
                 pt::ptree originTree = origin->getGames();
                 int count = originTree.get<int>("games.count");
                 if (uplay->getIsInstalled())
@@ -167,22 +192,15 @@ void ResultsPage::initializePage()
 
                 tabWidget->addTab(origin->createPane(this), "Origin");
             }
-            dialog->setValue(2);
-            QApplication::processEvents();
 
             if (uplay->getIsInstalled())
             {
-                uplay->findGames();
                 pt::ptree uplayTree = uplay->getGames();
                 int count = uplayTree.get<int>("games.count");
                 setTitle(title() + QString::number(count) + QString(" Uplay game") + (count == 1 ? QString(".") : QString("s.")));
 
                 tabWidget->addTab(uplay->createPane(this), "Uplay");
             }
-            dialog->setValue(3);
-            QApplication::processEvents();
-
-            dialog->close();
 
             selectAllBtn = new QPushButton("Select all");
             deselectAllBtn = new QPushButton("Deselect all");

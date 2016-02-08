@@ -8,7 +8,7 @@ class OriginDRM : public DRMType
     QList<QButtonGroup*> buttonGroupVector;
 
 public:
-    void checkOriginExists();
+    void checkExists();
     using DRMType::DRMType;
     QWidget* createPane(QWidget* parent);
     void findGames();

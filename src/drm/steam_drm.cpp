@@ -1,7 +1,12 @@
 #include "steam_drm.h"
 #include <libs/steam_vdf_parse.hpp>
 
-SteamDRM::SteamDRM() : DRMType("<b>Steam</b>") {}
+SteamDRM::SteamDRM() : DRMType("<b>Steam</b>")
+{
+    statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
+    descLabel = new QLabel("Uplay not found on the system. Verify installation and try again.");
+}
+
 /** Check if Steam is installed on the current computer, if applicable, and sets some values for later pages to
  * check on.
  */
@@ -64,11 +69,6 @@ void SteamDRM::checkExists()
         {
             descLabel->setText(descLabel->text() + "\n\nLibrary folders:\n" + pathString);
         }
-    }
-    else
-    {
-        statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
-        descLabel = new QLabel("Steam not found. Verify installation and try again.");
     }
 }
 

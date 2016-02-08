@@ -201,7 +201,7 @@ if(WIN32)
     if (WINDEPLOY)
         add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
             # Call windeployqt to copy necessary dependencies into the executable path.
-            COMMAND CMD /C "${WINDEPLOY} $<$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>,$<CONFIG:RelWithDebInfo>>:--release> --no-translations  $<TARGET_FILE:${PROJECT_NAME}> --dir $<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins && move $<TARGET_FILE_DIR:${PROJECT_NAME}>\\plugins\\*.dll $<TARGET_FILE_DIR:${PROJECT_NAME}>"
+            COMMAND CMD /C "call ${Qt5Core_DIR}/../../../bin/qtenv2.bat && ${WINDEPLOY} $<$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>,$<CONFIG:RelWithDebInfo>>:--release> --no-translations  $<TARGET_FILE:${PROJECT_NAME}> --dir $<TARGET_FILE_DIR:${PROJECT_NAME}>/plugins && move $<TARGET_FILE_DIR:${PROJECT_NAME}>\\plugins\\*.dll $<TARGET_FILE_DIR:${PROJECT_NAME}>"
             )
     else()
         message(WARNING "Unable to find Qt Windows deployment tool at ${Qt5Core_DIR}/../../../bin, no runtime dependencies will be copied.")

@@ -3,10 +3,14 @@
 #include <QCheckBox>
 #include <QStandardPaths>
 
-OriginDRM::OriginDRM() : DRMType("<b>Origin</b>"){}
+OriginDRM::OriginDRM() : DRMType("<b>Origin</b>")
+{
+    statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
+    descLabel = new QLabel("Origin not found on the system. Verify installation and try again.");
+}
 
 /** Check if Origin exists or not and set various class variables accordingly. */
-void OriginDRM::checkOriginExists()
+void OriginDRM::checkExists()
 {
     QDir originRoot;
     QDir originFolder;
@@ -16,7 +20,7 @@ void OriginDRM::checkOriginExists()
     originRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).append("/Origin/");
 #endif
 
-    if (QDir(originRoot.filePath("local.xml")).exists())
+    if (QFile(originRoot.filePath("local.xml")).exists())
     {
         pt::ptree originTree;
         read_xml(originRoot.filePath("local.xml").toLocal8Bit().constData(), originTree);
@@ -43,11 +47,6 @@ void OriginDRM::checkOriginExists()
         this->setIsInstalled();
         statusLabel->setPixmap(QPixmap(":/system_menu/icons/tick.svg"));
         descLabel = new QLabel("Origin found in " + originFolder.filePath(""));
-    }
-    else
-    {
-        statusLabel->setPixmap(QPixmap(":/system_menu/icons/cross.svg"));
-        descLabel = new QLabel("Origin not found. Verify installation and try again.");
     }
 }
 

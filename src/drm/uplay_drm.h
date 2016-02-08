@@ -8,7 +8,7 @@ class UplayDRM : public DRMType
     QList<QButtonGroup*> buttonGroupVector;
 
 public:
-    void checkUplayExists();
+    void checkExists();
     using DRMType::DRMType;
     void findGames();
     pt::ptree getGames();
